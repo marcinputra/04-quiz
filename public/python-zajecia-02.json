@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "question": "Do czego służą wcięcia (indentation) w Pythonie?",
+        "code": "",
+        "options": [
+            "Do dekoracji kodu",
+            "Do wyznaczania bloków kodu",
+            "Do zwiększania wydajności programu",
+            "Do importowania bibliotek"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 2,
+        "question": "Co rozpoczyna blok kodu w Pythonie?",
+        "code": "",
+        "options": [
+            "Średnik ;",
+            "Nawias klamrowy {",
+            "Dwukropek :",
+            "Znak ="
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 3,
+        "question": "Jakie rozszerzenie mają pliki z kodem Pythona?",
+        "code": "",
+        "options": [
+            ".python",
+            ".pt",
+            ".py",
+            ".code"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "question": "Czym jest rozszerzenie pliku?",
+        "code": "",
+        "options": [
+            "Nazwą programu",
+            "Ciągiem znaków po kropce w nazwie pliku",
+            "Typem zmiennej",
+            "Instrukcją w Pythonie"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 5,
+        "question": "Która funkcja pobiera dane od użytkownika?",
+        "code": "",
+        "options": [
+            "print()",
+            "read()",
+            "scan()",
+            "input()"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 6,
+        "question": "Co robi funkcja print()?",
+        "code": "",
+        "options": [
+            "Pobiera dane od użytkownika",
+            "Tworzy zmienną",
+            "Wyświetla dane na ekranie",
+            "Zamyka program"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 7,
+        "question": "Który zapis tworzy prawidłową zmienną w Pythonie?",
+        "code": "",
+        "options": [
+            "liczba == 10",
+            "int liczba = 10",
+            "liczba = 10",
+            "set liczba = 10"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 8,
+        "question": "Jak sprawdzić typ zmiennej?",
+        "code": "",
+        "options": [
+            "typeof()",
+            "check()",
+            "type()",
+            "var()"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 9,
+        "question": "Który z poniższych typów jest liczbą całkowitą?",
+        "code": "",
+        "options": [
+            "float",
+            "str",
+            "int",
+            "bool"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 10,
+        "question": "Co zwróci bool(0)?",
+        "code": "",
+        "options": [
+            "True",
+            "False",
+            "0",
+            "Błąd"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 11,
+        "question": "Który z poniższych typów jest liczbą rzeczywistą?",
+        "code": "",
+        "options": [
+            "float",
+            "str",
+            "int",
+            "bool"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 12,
+        "question": "Czym jest komentarz w Pythonie?",
+        "code": "",
+        "options": [
+            "Kod wykonywany przez program",
+            "Opis kodu, który nie jest wykonywany",
+            "Funkcja w Pythonie",
+            "Typ zmiennej"
+        ],
+        "correctAnswer": 1
+    }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "question": "Jaki warunek musi być spełniony, aby wyszukiwanie binarne działało poprawnie?",
+    "code": "",
+    "options": [
+      "Lista musi być posortowana",
+      "Lista musi zawierać liczby całkowite",
+      "Lista musi mieć parzystą długość",
+      "Lista nie może zawierać duplikatów"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 2,
+    "question": "Jak obliczamy indeks środkowego elementu w wyszukiwaniu binarnym?",
+    "code": "",
+    "options": [
+      "(poczatek + koniec) // 2",
+      "(poczatek * koniec) // 2",
+      "poczatek + koniec",
+      "(koniec - poczatek) // 2"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 3,
+    "question": "Co robimy, gdy element w środku jest mniejszy niż szukany?",
+    "code": "",
+    "options": [
+      "Przeszukujemy lewą połowę",
+      "Zwracamy wynik",
+      "Przeszukujemy prawą połowę",
+      "Sortujemy listę"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 4,
+    "question": "Jaką wartość zwraca algorytm, jeśli nie znajdzie elementu?",
+    "code": "",
+    "options": [
+      "0",
+      "None",
+      "-1",
+      "False"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 5,
+    "question": "Ile elementów maksymalnie sprawdzi wyszukiwanie binarne dla listy o rozmiarze n?",
+    "code": "",
+    "options": [
+      "n",
+      "n/2",
+      "log n",
+      "n^2"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "Która z poniższych struktur najlepiej nadaje się do wyszukiwania binarnego?",
+    "code": "",
+    "options": [
+      "Nieposortowana lista",
+      "Posortowana lista",
+      "Słownik",
+      "Zbiór"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 7,
+    "question": "Która wersja wyszukiwania binarnego wykorzystuje stos wywołań funkcji?",
+    "code": "",
+    "options": [
+      "Iteracyjna",
+      "Rekurencyjna",
+      "Losowa",
+      "Dynamiczna"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "Która wersja wyszukiwania binarnego używa pętli while?",
+    "code": "",
+    "options": [
+      "Rekurencyjna",
+      "Iteracyjna",
+      "Zagnieżdżona",
+      "Równoległa"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "question": "Co jest główną zaletą wyszukiwania binarnego w porównaniu do liniowego?",
+    "code": "",
+    "options": [
+      "Działa na każdej liście",
+      "Jest prostsze w implementacji",
+      "Ma mniejszą złożoność czasową",
+      "Nie wymaga pamięci"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "Jak zmieniają się granice przeszukiwania po każdej iteracji?",
+    "code": "",
+    "options": [
+      "Zwiększamy oba końce",
+      "Zmniejszamy oba końce",
+      "Zawężamy zakres do połowy",
+      "Resetujemy zakres"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 11,
+    "question": "W jakim przypadku wyszukiwanie binarne nie zadziała poprawnie?",
+    "code": "",
+    "options": [
+      "Gdy lista jest bardzo duża",
+      "Gdy lista zawiera liczby ujemne",
+      "Gdy lista nie jest posortowana",
+      "Gdy element nie istnieje"
+    ],
+    "correctAnswer": 2
+  },
+    {
+    "id": 12,
+    "question": "Co robimy, gdy element w środku jest większy niż szukany?",
+    "code": "",
+    "options": [
+      "Przeszukujemy prawą połowę",
+      "Przeszukujemy lewą połowę",
+      "Zwracamy wynik",
+      "Kończymy działanie programu"
+    ],
+    "correctAnswer": 1
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "Do czego służą komentarze w Pythonie?",
+    "code": "",
+    "options": [
+      "Do wykonywania kodu",
+      "Do opisywania kodu i jego wyjaśniania",
+      "Do deklarowania zmiennych",
+      "Do tworzenia funkcji"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "Jak zapisujemy komentarz jednoliniowy w Pythonie?",
+    "code": "",
+    "options": [
+      "// komentarz",
+      "/* komentarz */",
+      "# komentarz",
+      "-- komentarz"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "Jaki typ danych zwraca funkcja input()?",
+    "code": "",
+    "options": [
+      "int",
+      "float",
+      "str",
+      "bool"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 4,
+    "question": "Która funkcja konwertuje tekst na liczbę całkowitą?",
+    "code": "",
+    "options": [
+      "str()",
+      "int()",
+      "float()",
+      "input()"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "Czym jest zmienna w Pythonie?",
+    "code": "",
+    "options": [
+      "Funkcją matematyczną",
+      "Miejscem w pamięci przechowującym wartość",
+      "Operatorem",
+      "Komentarzem"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 6,
+    "question": "Która linia poprawnie przypisuje wartość 5 do zmiennej x?",
+    "code": "",
+    "options": [
+      "x == 5",
+      "5 = x",
+      "x = 5",
+      "int x = 5"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "question": "Do czego służy funkcja print()?",
+    "code": "",
+    "options": [
+      "Do pobierania danych od użytkownika",
+      "Do wyświetlania danych na ekranie",
+      "Do konwersji typów",
+      "Do zapisywania plików"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "Jaki będzie wynik działania?",
+    "code": "print(10 / 2)",
+    "options": [
+      "5",
+      "5.0",
+      "2",
+      "10"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "question": "Jaki operator zwraca resztę z dzielenia?",
+    "code": "",
+    "options": [
+      "/",
+      "//",
+      "%",
+      "**"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "Jaki będzie wynik działania?",
+    "code": "print(7 // 3)",
+    "options": [
+      "3.5",
+      "3",
+      "4",
+      "2"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 11,
+    "question": "Co robi operator += ?",
+    "code": "",
+    "options": [
+      "Odejmowanie wartości",
+      "Mnożenie wartości",
+      "Dodanie i przypisanie do zmiennej",
+      "Porównanie wartości"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 12,
+    "question": "Jaki będzie wynik?",
+    "code": "print('Ala' + ' ma kota')",
+    "options": [
+      "Błąd",
+      "Ala ma kota",
+      "Ala, ma kota",
+      "Ala+ma kota"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 13,
+    "question": "Jaki będzie wynik?",
+    "code": "print(3 * 'Hi ')",
+    "options": [
+      "Hi Hi Hi ",
+      "Hi3",
+      "Błąd",
+      "3Hi"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 14,
+    "question": "Która funkcja zwraca długość napisu?",
+    "code": "",
+    "options": [
+      "size()",
+      "length()",
+      "len()",
+      "count()"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 15,
+    "question": "Jaki będzie wynik działania?",
+    "code": "print(True + True)",
+    "options": [
+      "True",
+      "2",
+      "1",
+      "0"
+    ],
+    "correctAnswer": 1
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "question": "Do czego służy klauzula JOIN w SQL?",
+    "code": "",
+    "options": [
+      "Do usuwania rekordów z wielu tabel jednocześnie",
+      "Do łączenia danych z wielu tabel na podstawie wspólnej kolumny",
+      "Do sortowania wyników zapytania",
+      "Do tworzenia kopii tabel"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "Który typ JOIN zwraca tylko rekordy mające dopasowanie w obu tabelach?",
+    "code": "",
+    "options": [
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL JOIN",
+      "INNER JOIN"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 3,
+    "question": "Który JOIN pokaże wszystkich klientów, nawet jeśli nie mają zamówień?",
+    "code": "",
+    "options": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN",
+      "CROSS JOIN"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 4,
+    "question": "Co oznaczają wartości NULL w wyniku LEFT JOIN?",
+    "code": "",
+    "options": [
+      "Błąd w zapytaniu",
+      "Brak danych w tabeli po lewej stronie",
+      "Brak dopasowanego rekordu w tabeli po prawej stronie",
+      "Niepoprawny typ danych"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 5,
+    "question": "Jaka jest główna różnica między WHERE a HAVING?",
+    "code": "",
+    "options": [
+      "WHERE działa tylko z JOIN",
+      "HAVING filtruje przed GROUP BY",
+      "WHERE filtruje wiersze, a HAVING grupy",
+      "HAVING nie może używać funkcji agregujących"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "Kiedy należy użyć klauzuli HAVING?",
+    "code": "",
+    "options": [
+      "Gdy filtrujemy pojedyncze rekordy",
+      "Gdy filtrujemy dane przed JOIN",
+      "Gdy filtrujemy wyniki funkcji agregujących",
+      "Zamiast klauzuli WHERE"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "question": "Która kolejność klauzul w zapytaniu SQL jest poprawna?",
+    "code": "",
+    "options": [
+      "SELECT → HAVING → GROUP BY → WHERE",
+      "SELECT → WHERE → GROUP BY → HAVING",
+      "WHERE → SELECT → GROUP BY → HAVING",
+      "SELECT → GROUP BY → WHERE → HAVING"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "Co bedzie wynikiem poniższego zapytania?",
+    "code": "SELECT o.imie, o.nazwisko, z.produkt, z.kwota\nFROM osoby o\nJOIN zamowienia z ON o.id_osoby = z.id_osoby\nWHERE z.kwota > 2000;",
+    "options": [
+        "Zostaną zwrócone tylko rekordy z tabel osoby i zamowienia, w których kwota zamówienia jest większa niż 2000",
+        "Zostaną zwrócone wszystkie osoby, niezależnie od wartości zamówień",
+        "Zostaną zwrócone wszystkie zamówienia, nawet te bez dopasowanej osoby, przy osobie zapiszę się NULL",
+        "Zapytanie nie zwróci żadnych wyników, ponieważ użyto nieprawdiłowo JOIN"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 9,
+    "question": "Który JOIN pokaże zamówienia bez przypisanego klienta?",
+    "code": "",
+    "options": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "SELF JOIN"
+    ],
+    "correctAnswer": 2
+  } 
+]

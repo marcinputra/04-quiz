@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Jak utworzyć tabelę 'users' z kolumnami id (INT) i name (VARCHAR)?",
+        "code": "",
+        "options": ["CREATE TABLE users (id INT, name VARCHAR(100));", "MAKE TABLE users (id INT, name VARCHAR(100));", "NEW TABLE users (id INT, name VARCHAR(100));", "ADD TABLE users (id INT, name VARCHAR(100));"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 2,
+        "question": "Która komenda usuwa całą tabelę 'products' wraz z danymi?",
+        "code": "",
+        "options": ["REMOVE TABLE products;", "DELETE TABLE products;", "DROP TABLE products;", "DESTROY TABLE products;"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 3,
+        "question": "Co robi poniższe zapytanie?",
+        "code": "ALTER TABLE customers ADD COLUMN email VARCHAR(255);",
+        "options": ["Tworzy nową tabelę customers", "Usuwa kolumnę email", "Dodaje nową kolumnę email do tabeli customers", "Zmienia nazwę tabeli customers"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "question": "Jak usunąć bazę danych 'test_db'?",
+        "code": "",
+        "options": ["DELETE DATABASE test_db;", "REMOVE DATABASE test_db;", "DROP DATABASE test_db;", "DESTROY DATABASE test_db;"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 5,
+        "question": "Jak zmienić nazwę tabeli z 'old_name' na 'new_name'?",
+        "code": "",
+        "options": ["ALTER TABLE old_name RENAME TO new_name;", "CHANGE TABLE old_name TO new_name;", "UPDATE TABLE old_name SET new_name;", "MODIFY TABLE old_name AS new_name;"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 6,
+        "question": "Co robi poniższe zapytanie?",
+        "code": "ALTER TABLE orders DROP COLUMN discount;",
+        "options": ["Usuwa tabelę orders", "Tworzy kolumnę discount", "Zmienia typ kolumny discount", "Usuwa kolumnę discount z tabeli orders"],
+        "correctAnswer": 3
+    },
+    {
+        "id": 7,
+        "question": "Jak utworzyć tabelę z kluczem głównym?",
+        "code": "",
+        "options": ["CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));", "CREATE TABLE users (id INT KEY, name VARCHAR(100));", "CREATE TABLE users (id INT MAIN, name VARCHAR(100));", "CREATE TABLE users (id INT UNIQUE, name VARCHAR(100));"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 8,
+        "question": "Która komenda zmienia typ danych kolumny 'price' na liczbę dziesiętną?",
+        "code": "",
+        "options": ["CHANGE TABLE products COLUMN price DECIMAL(10,2);", "UPDATE TABLE products SET price DECIMAL(10,2);", "ALTER TABLE products MODIFY COLUMN price DECIMAL(10,2);", "MODIFY TABLE products COLUMN price DECIMAL(10,2);"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 9,
+        "question": "Jak utworzyć tabelę z kluczem głównym z automatycznym powiększeniem indeksów?",
+        "code": "",
+        "options": ["CREATE TABLE posts (id INT AUTO_INCREMENT PRIMARY KEY);", "CREATE TABLE posts (id INT INCREMENT PRIMARY KEY);", "CREATE TABLE posts (id INT AUTOINCREMENT PRIMARY KEY);", "CREATE TABLE posts (id INT AUTO PRIMARY KEY);"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 10,
+        "question": "Co robi komenda DROP DATABASE?",
+        "code": "",
+        "options": ["Usuwa wszystkie dane z bazy", "Usuwa całą bazę danych wraz z tabelami", "Usuwa tylko tabele z bazy", "Czyści pamięć cache bazy"],
+        "correctAnswer": 1
+    }
+]

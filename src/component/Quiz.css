@@ -1,0 +1,48 @@
+.maturazinformatyki-quiz-code {
+  border: #d88f2c 1px dotted;
+  border-radius: 8px;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  font-size: 13px;
+  padding: 12px;
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.5;
+  background: #0f1011;
+  /* overflow-x: auto; */
+  color: #d88f2c;
+}
+
+.maturazinformatyki-quiz-question-btn {
+  background-color: #262a2b;
+  border: #facc15 2px solid;
+  color: #facc15;
+  text-align: center;
+  margin: 5px;
+  padding: 20px;
+  transition: .4s;
+}
+
+.maturazinformatyki-quiz-close-btn {
+    background-color: #d88f2c;
+    color: #0f1011;
+    font-weight: 600;
+    border: 1px solid #0f1011;
+    border-radius: 8px;
+}
+
+.maturazinformatyki-quiz-close-btn:disabled {
+    background-color: #6b7476;
+}
+
+.maturazinformatyki-quiz-question-answer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.maturazinformatyki-quiz-question-btn {
+    margin: 12px;
+    color: #0f1011;
+}

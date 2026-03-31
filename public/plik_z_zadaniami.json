@@ -1,0 +1,186 @@
+[
+{
+    "question": "Która linijka kodu jest poprawnie zakomentowana",
+    "code": "Comment: Linijka 1\n# Linijka 2\n// Linijka 3\n-- Linijka 4",
+    "options": ["Linijka 1","Linijka 2","Linijka 3","Linijka 4"],
+    "correctAnswer": 1,
+    "category": "",
+    "level": 1
+},
+{
+    "question": "Jaką wartość przyjmie zmienna x",
+    "code": "x: float = 11 // 4",
+    "options": ["2,5","2","3","2,75"],
+    "correctAnswer": 1,
+    "category": "",
+    "level": 1
+},
+{
+    "question": "Czy podany kod poprawnie oblicza wartość dziesiętną liczby binarnej x, jaka jest jej poprawna wartość",
+    "code": "x = \"10011011\"\nx_i = int(x)\np = 1\nwartosc_dziesietna = 0\nwhile x_i > 0:\n\twartosc_dziesietna += (x_i % 10) * p\n\tx_i //= 10\n\tp *= 2",
+    "options": ["Poprawnie, 155","Poprawnie, 310","Niepoprawnie, 155","Niepoprawnie, 310"],
+    "correctAnswer": 0
+},
+{
+    "question": "Czym w pętli można zamienić auto lub Any by było to zgodne z danymi w programie",
+    "code": "x = [1, 2, 3, 4, 5]\nor a in x:\n\ta: Any",
+    "options": ["vector<int> lub list[int]","type_deduce lub automatic","int","Nie można tego zamienić"],
+    "correctAnswer": 2,
+    "category": "",
+    "level": 1
+},
+{
+    "question": "Która lub które linijki kodu zadziałają",
+    "code": "retsym: int = 21\nmyster: set[list[dict[int, int]]] = 37\nbartlomiej: list[dict[list[set[int]], None]] = [[[[[5]]]]]",
+    "options": ["Linijka 1","Linijka 2 i 3","Wszystkie zadziałają","Żadna nie zadziała"],
+    "correctAnswer": 2,
+    "category": "",
+    "level": 1
+},
+
+{
+    "question": "Co robi funkcja abs",
+    "code": "",
+    "options": ["Wykonuje atomowe wyszukiwanie binarne (Atomic Binary Search)","Sprawdza czy liczba jest absolutna","Inicjalizuje zasoby przy starcie programu (Anti-lock Braking System)","Zwraca wartość bezwzględną dla liczby"],
+    "correctAnswer": 3
+},
+{
+    "question": "Ile co najmniej potrzebujemy bitów by zapisać liczbę całkowitą w zakresie -2 147 483 648 … 2 147 483 647, odpowiednik int w cpp",
+    "code": "",
+    "options": ["32","16","10","4"],
+    "correctAnswer": 0
+},
+
+
+{
+    "question": "Która lub które linijki kodu zadziałają",
+    "code": "char myster = 67;\nauto retsym = \"wybierz mnie\";\nlong long poprawna_odpowiedz = 'W';",
+    "options": ["Linijka 1","Linijka 2 i 3","Wszystkie zadziałają","Żadna nie zadziała"],
+    "correctAnswer": 2
+},
+{
+    "question": "Czym w pętli można zamienić auto lub Any by było to zgodne z danymi w programie",
+    "code": "auto x = {5, 4, 3, 2, 1};\nfor(auto a : x) {}",
+    "options": ["vector<int> lub list[int]","type_deduce lub automatic","int","Nie można tego zamienić"],
+    "correctAnswer": 2
+},
+{
+    "question": "Czy podany kod poprawnie oblicza wartość dziesiętną liczby binarnej x, jaka jest jej poprawna wartość",
+    "code": "#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n\tstring x = \"10011011\";\n \tint x_i = stoi(x);\n\tint p = 1;\n\tint wartosc_dziesietna = 0;\n\twhile(x_i > 0)\n\t{\n\t\twartosc_dziesietna += (x_i % 10) * p;\n\t\tx_i /= 10;\n\t\tp *= 2;\n\t}\n}",
+    "options": ["Poprawnie, 155","Poprawnie, 310","Niepoprawnie, 155","Niepoprawnie, 310"],
+    "correctAnswer": 0
+},
+{
+    "question": "Jaką wartość przyjmie zmienna x",
+    "code": "int x = 11 / 4;",
+    "options": ["2,5","2","3","2,75"],
+    "correctAnswer": 1
+},
+{
+    "question": "Która linijka kodu jest poprawnie zakomentowana",
+    "code": "-- Linijka 1\n// Linijka 2\n# Linijka 3\nComment: Linijka 4",
+    "options": ["Linijka 1","Linijka 2","Linijka 3","Linijka 4"],
+    "correctAnswer": 1
+},
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "_ = (lambda x: 6, [abs(7), chr(6), exit(7)])\nif 0 > 0:\n  x = 5\nfor x in range(1, 13 + 1):\n     print(x, end=\"\")",
+    "Options": ["01234567891011121012345678910111213,12345678910111213,123456789101112,Niczego nie wyświetli"],
+    "CorrectAnswer":3
+},
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "include <iostream>\nusing namespace std;\nint main()\n{\n    return 0;\n   int MYSTERy_box = 6 + 7;\n  for(int i = 1; i <= MYSTERy_box; i++)\n     cout << i;\n}",
+    "Options": ["01234567891011121012345678910111213,12345678910111213,123456789101112,Niczego nie wyświetli"],
+    "CorrectAnswer":3
+},
+
+{
+    "Question": "Ile razy wykona sie funkcja zaleznie od n",
+    "Code": "def MYSTERious_function(n):\n  return 1 if n <= 1 else n * MYSTERious_function(n - 1)",
+    "Options": ["n,n!,2n,n^2"],
+    "CorrectAnswer":0
+},
+{
+    "Question": "Ile razy wykona sie funkcja zaleznie od n",
+    "Code": "int MYSTERious_function(int n)\n{\n    if(n <= 1) return 1;\n  return n * MYSTERious_function(n - 1);\n}",
+    "Options": ["n,n!,2n,n^2"],
+    "CorrectAnswer":0
+},
+
+{
+    "Question": "Program znajduje się w folderze CFortniteBlitzCarti, podany kod będzie próbował otworzyć plik o ścieżce",
+    "Code": "plik = open(\".\\\\skin.png\")",
+    "Options": ["C:\\Fortnite\\Blitz\\skin.png","C:\\Fortnite\\Blitz\\Carti\\.\\skin.png","C:\\Fortnite\\Blitz\\Carti\\skin.png","Taka ścieżka nie jest możliwa, Windows nie pozwala na kropkę jako nazwę folderu"],
+    "CorrectAnswer":2
+},
+
+{
+    "Question": "Program znajduje się w folderze CFortniteBlitzCarti, podany kod będzie próbował otworzyć plik o ścieżce",
+    "Code": "ifstream plik(\".\\\\skin.png\");",
+    "Options": ["C:\\Fortnite\\Blitz\\skin.png,C:\\Fortnite\\Blitz\\Carti\\.\\skin.png,C:\\Fortnite\\Blitz\\Carti\\skin.png,Taka ścieżka nie jest możliwa, Windows nie pozwala na kropkę jako nazwę folderu"],
+    "CorrectAnswer":2
+},
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "from math import isqrt, gcd, lcm\nx = 67\nx &= 6\nx |= 7\nx //= x ** 3\nx += 3\nx += gcd(16, 4)\nx ^= lcm(8, 32)\nx = isqrt(x)\nif x == 6:\n   print(\"Sean\")\nelif x == 7:\n   print(\"Jeffrey\")\nelif x == 9:\n    print(\"Marcin\")\nelse:\n    print(\"Stuart\")",
+    "Options": ["Sean,Jeffrey,Marcin,Stuart"],
+    "CorrectAnswer": 0
+},
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "#include <iostream>\n#include <numeric>\n#include <cmath>\n\nusing namespace std;\n\nint main()\n{\n    int x = 67;\n    x &= 6;\n    x |= 7;\n    x /= (x * x * x);\n    x += 3;\n    x += gcd(16, 4);\n    x ^= lcm(8, 32);\n    x = sqrt(x);\n\n    if (x == 6)\n        cout << \"Sean\";\n    else if (x == 7)\n        cout << \"Jeffrey\";\n    else if (x == 9)\n        cout << \"Marcin\";\n    else\n        cout << \"Stuart\";\n}",
+    "Options": ["Sean,Jeffrey,Marcin,Stuart"],
+    "CorrectAnswer": 0
+},
+
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "from math import prod\n\ny = 7\ny -= 6\ny += 9\ny += ord(\"c\")\ny *= ord(chr(7))\ny //= 99\ny *= prod(range(999))\n\nif y == 6:\n    print(\"Putra\")\nelif y == 4:\n    print(\"Burton\")\nelif y == 2:\n    print(\"Edward\")\nelif y == 0:\n    print(\"Combs\")",
+    "Options": ["Putra", "Burton", "Edward", "Combs"],
+    "CorrectAnswer": 3
+},
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    int y = 7;\n    y -= 6;\n    y += 9;\n    y += (int)'c';\n    y *= (int)(char)7;\n    y /= 99;\n    for (int i = 0; i < 999; i++)\n        y *= i;\n\n    if (y == 6)\n        cout << \"Putra\";\n    else if (y == 4)\n        cout << \"Burton\";\n    else if (y == 2)\n        cout << \"Edward\";\n    else if (y == 0)\n        cout << \"Combs\";\n}",
+    "Options": ["Putra", "Burton", "Edward", "Combs"],
+    "CorrectAnswer": 3
+
+},
+
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "odpowiedz = \"epstein to odpowiedz tak no diddy\"\nz = sum(map(ord, odpowiedz))\ndidi = \"diddy\"\nepstin = \"epstein\"\nmyster = \"mr\"\nstju = \"stuu\"\npliki_epsteina = list(map(lambda x: sum(map(ord, x)), [didi, epstin, myster, stju]))\n[didi, epstin, myster, stju] = pliki_epsteina\nz = z - didi - epstin - myster - stju\n\nprint(\"WESOŁYCH ŚWIĄT ŻYCZY WAM W TYM ROKU \", end=\"\")\nif z == 1337:\n    print(\"Myster\")\nelif z == 2115:\n    print(\"Stuu\")\nelif z == 1221:\n    print(\"Epstein\")\nelse:\n    print(\"Diddy\")",
+    "Options": ["Myster", "Stuu", "Epstein", "Diddy"],
+    "CorrectAnswer": 2
+},
+{
+    "Question": "Co wyświetli podany kod",
+    "Code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint ascii_sum(string s) {\n    int sum = 0;\n    for (char c : s) sum += c;\n    return sum;\n}\n\nint main() {\n    string odpowiedz = \"epstein to odpowiedz tak no diddy\";\n\n    int z = ascii_sum(odpowiedz);\n    int diddy = ascii_sum(\"diddy\");\n    int epstein = ascii_sum(\"epstein\");\n    int myster = ascii_sum(\"mr\");\n    int stju = ascii_sum(\"stuu\");\n\n    z -= diddy + epstein + myster + stju;\n\n    cout << \"WESOŁYCH ŚWIĄT ŻYCZY WAM W TYM ROKU \";\n    if (z == 1337) cout << \"Myster\";\n    else if (z == 2115) cout << \"Stuu\";\n    else if (z == 1221) cout << \"Epstein\";\n    else cout << \"Diddy\";\n}",
+    "Options": ["Myster", "Stuu", "Epstein", "Diddy"],
+    "CorrectAnswer": 2
+},
+
+
+
+  
+{
+    "question": "Czym w pętli można zamienić auto lub Any by było to zgodne z danymi w programie",
+    "code": "x = [1, 2, 3, 4, 5]\nfor a in x:\n\ta: Any",
+    "options": ["vector<int> lub list[int]","type_deduce lub automatic","int","Nie można tego zamienić"],
+    "correctAnswer": 2
+},
+
+
+  { 
+    "question": "Ile razy wykona się pętla?", 
+    "code": "",
+    "options": ["Odp A", "Odp B", "Odp C", "Odp D"], 
+    "correctAnswer": 2 
+  }
+]

@@ -1,0 +1,73 @@
+
+[
+    {
+        "id": 1,
+        "question": "Jak połączyć tabele users i orders, aby pokazać wszystkich użytkowników wraz z ich zamówieniami (nawat tych którzy nie mają zamówień)?",
+        "code": "SELECT users.name, orders.order_date\nFROM users\n___\nON users.id = orders.user_id;",
+        "options": ["INNER JOIN orders", "LEFT JOIN orders", "RIGHT JOIN orders", "CROSS JOIN orders"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 2,
+        "question": "Jak policzyć liczbę zamówień dla każdego klienta i pokazać tylko tych z więcej niż 3 zamówieniami?",
+        "code": "SELECT customer_id, COUNT(*) as total\nFROM orders\nGROUP BY customer_id\n___;",
+        "options": ["WHERE COUNT(*) > 3", "FILTER COUNT(*) > 3", "HAVING COUNT(*) > 3", "IF COUNT(*) > 3"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 3,
+        "question": "Jak znaleźć produkty droższe niż średnia cena wszystkich produktów?",
+        "code": "SELECT name, price\nFROM products\nWHERE price > ___;",
+        "options": ["AVG(price) > 10", "(SELECT AVG(price) FROM products)", "AVERAGE(price)", "MEAN(price)"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 4,
+        "question": "Jak połączyć trzy tabele: users, orders i products?",
+        "code": "SELECT u.name, o.order_date, p.product_name\nFROM users u\nJOIN orders o ON u.id = o.user_id\n___\nON o.product_id = p.id;",
+        "options": ["AND products p", "WITH products p", "JOIN products p", "CONNECT products p"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 5,
+        "question": "Jak połączyć listę klientów z Polski i listę dostawców z Polski w jeden wynik?",
+        "code": "SELECT name, 'customer' as type FROM customers WHERE country = 'Poland'\n___\nSELECT name, 'supplier' as type FROM suppliers WHERE country = 'Poland';",
+        "options": ["JOIN", "MERGE", "UNION", "COMBINE"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 6,
+        "question": "Jak pokazać wszystkie zamówienia wraz z danymi klientów (nawet jeśli klient został usunięty)?",
+        "code": "SELECT orders.id, customers.name\nFROM orders\n___\nON orders.customer_id = customers.id;",
+        "options": ["INNER JOIN customers", "LEFT JOIN customers", "RIGHT JOIN customers", "FULL JOIN customers"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 7,
+        "question": "Jak znaleźć klientów którzy nigdy nie złożyli zamówienia?",
+        "code": "SELECT c.name\nFROM customers c\nLEFT JOIN orders o ON c.id = o.customer_id\n___;",
+        "options": ["WHERE o.id = NULL", "WHERE o.id IS NULL", "HAVING o.id IS NULL", "WHERE o.id == NULL"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 8,
+        "question": "Jak posortować wyniki po cenie malejąco, a potem po nazwie rosnąco?",
+        "code": "SELECT * FROM products\n___;",
+        "options": ["ORDER BY price DESC, name ASC", "SORT BY price DESC, name ASC", "ORDER BY price DOWN, name UP", "ARRANGE BY price DESC, name ASC"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 9,
+        "question": "Jak znaleźć najdroższy produkt w każdej kategorii?",
+        "code": "SELECT category, MAX(price) as max_price\nFROM products\n___;",
+        "options": ["ORDER BY category", "GROUP BY category", "SORT BY category", "ARRANGE BY category"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 10,
+        "question": "Jak ograniczyć wyniki do pierwszych 10 rekordów?",
+        "code": "SELECT * FROM customers\nORDER BY created_at DESC\n___;",
+        "options": ["TOP 10", "LIMIT 10", "FIRST 10", "MAX 10"],
+        "correctAnswer": 1
+    }
+]

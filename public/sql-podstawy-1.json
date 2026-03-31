@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Która komenda służy do wyświetlenia wszystkich rekordów z tabeli 'users'?",
+        "code": "",
+        "options": ["SELECT * FROM users;", "GET ALL FROM users;", "SHOW users;", "DISPLAY * FROM users;"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 2,
+        "question": "Jak utworzyć nową bazę danych o nazwie 'shop'?",
+        "code": "",
+        "options": ["NEW DATABASE shop;", "MAKE DATABASE shop;", "CREATE DATABASE shop;", "ADD DATABASE shop;"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 3,
+        "question": "Co robi poniższe zapytanie?",
+        "code": "DELETE FROM products WHERE price < 10;",
+        "options": ["Usuwa tabelę products", "Usuwa wszystkie produkty o cenie mniejszej niż 10", "Usuwa kolumnę price", "Usuwa bazę danych"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 4,
+        "question": "Która klauzula służy do sortowania wyników w kolejności malejącej?",
+        "code": "",
+        "options": ["SORT BY DESC", "ARRANGE DESC", "ORDER BY DESC", "SORT DESC"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 5,
+        "question": "Który typ danych najlepiej nadaje się do przechowywania adresu email?",
+        "code": "",
+        "options": ["VARCHAR(255)", "INT", "DATE", "BOOLEAN"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 6,
+        "question": "Co oznacza PRIMARY KEY?",
+        "code": "",
+        "options": ["Kolumna może zawierać duplikaty", "Kolumna może być pusta", "Kolumna może zawierać tylko liczby", "Kolumna jednoznacznie identyfikuje każdy rekord"],
+        "correctAnswer": 3
+    },
+    {
+        "id": 7,
+        "question": "Jak dodać nowy rekord do tabeli 'customers'?",
+        "code": "",
+        "options": ["ADD INTO customers VALUES (...);", "NEW customers VALUES (...);", "PUT INTO customers VALUES (...);", "INSERT INTO customers VALUES (...);"],
+        "correctAnswer": 3
+    },
+    {
+        "id": 8,
+        "question": "Co robi klauzula WHERE w zapytaniu SQL?",
+        "code": "",
+        "options": ["Sortuje wyniki", "Łączy tabele", "Filtruje wyniki według warunku", "Grupuje dane"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 9,
+        "question": "Która komenda aktualizuje dane w tabeli?",
+        "code": "",
+        "options": ["UPDATE", "MODIFY", "CHANGE", "ALTER"],
+        "correctAnswer": 0
+    },
+    {
+        "id": 10,
+        "question": "Jak wybrać tylko unikalne wartości z kolumny 'city'?",
+        "code": "",
+        "options": ["SELECT UNIQUE city FROM table;", "SELECT DISTINCT city FROM table;", "SELECT DIFFERENT city FROM table;", "SELECT ONLY city FROM table;"],
+        "correctAnswer": 1
+    }
+]

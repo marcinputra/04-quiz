@@ -1,0 +1,18 @@
+services:
+  matutrazinformatyki_frontend:
+    container_name: quiz_matutrazinformatyki_it
+    build:
+      context: ./
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.matutrazinformatyki.rule=Host(`quiz.maturazinformatyki.it`)"
+      - "traefik.http.routers.matutrazinformatyki.entrypoints=websecure"
+      - "traefik.http.routers.matutrazinformatyki.tls.certresolver=letsencrypt"
+      - "traefik.http.services.matutrazinformatyki.loadbalancer.server.port=80"
+    networks:
+      - traefik-net
+
+networks:
+  traefik-net:
+    external: true

@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+  background-color: #262a2b;
+}
+
+.maturazinformatyki-quiz-start {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: #262a2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maturazinformatyki-quiz-start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 95%;
+  min-height: calc(80vh - 100px); 
+  background: linear-gradient(180deg, #262a2b, #262a2b67);
+  text-align: center;
+  color: #e5e7eb;
+  border: 1px solid #e5e7eb33;
+  box-shadow: 0px 0px 20px #e5e7eb62;
+  padding: 15px;
+}
+
+.maturazinformatyki-quiz-start-title {
+  color:#e5e7eb ;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.maturazinformatyki-quiz-start-title-yellow {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.maturazinformatyki-quiz-start-h2 {
+  margin-bottom: 15px;
+}
+
+.maturazinformatyki-quiz-start-p {
+  padding: 10px 0px;
+}
+
+.maturazinformatyki-quiz-start-p-ul {
+  text-align: left;
+  margin: 0px 60px;
+}
+
+.maturazinformatyki-quiz-start-label {
+  font-size: 16px;
+  color: #d88f2c;
+  padding: 4px;
+}
+
+input {
+  margin: 8px 0;
+}
+
+input[type=text] {
+  width: 40%;
+  font-size: 16px;
+  padding: 4px;
+  border: #d88f2c 1px solid;
+  margin: 0px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: .4s;
+}
+
+input[type=text]:focus {
+  border: #facc15 1px solid;
+  outline: none;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d88f2c;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 16px;
+}
+
+input[type="checkbox"]:checked::after{
+  content: '';
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid #262a2b;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: 2px 0 0 5px;
+}
+
+input[type="checkbox"]:checked{
+  background-color: #d88f2c;
+}
+
+.maturazinformatyki-quiz-start-button {
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.maturazinformatyki-quiz-start-progress {
+  font-size: 18px;
+  width: 100%;
+  transition: .4s;
+}
+
+.maturazinformatyki-quiz-start-progress-line {
+  width: 0%;
+  height: 2px;
+  margin: 20px;
+  background-color: #d8902c6b;
+}
+.maturazinformatyki-quiz-question {
+  font-size: 19px;
+  padding: 15px;
+}
+
+
+
+.maturazinformatyki-quiz-close-btn {
+  margin: 20px 0 5px 0;
+  background-color: #262a2b;
+  color: #e5e7eb;
+  padding: 10px;
+}
+.maturazinformatyki-quiz-question-btn:hover {
+  background-color: #262a2b;
+  border: #d88f2c 2px solid;
+  color: #d88f2c;
+}
+
+.maturazinformatyki-quiz-result {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: #262a2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maturazinformatyki-quiz-result-name {
+  font-size: 18px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.maturazinformatyki-quiz-result-result {
+  color: #facc15;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.maturazinformatyki-quiz-result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 60%;
+  min-height: calc(80vh - 100px); 
+  background: linear-gradient(180deg, #262a2b, #262a2b67);
+  text-align: center;
+  color: #e5e7eb;
+  border: 1px solid #e5e7eb33;
+  box-shadow: 0px 0px 20px #e5e7eb62;
+}
+
+
+@media (max-height: 600px)  {
+  .maturazinformatyki-quiz-start {
+    height: 600px;
+  }
+
+  .maturazinformatyki-quiz-start-container {
+    width: 80%;
+    height: 560px;
+  }
+}

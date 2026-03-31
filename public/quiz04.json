@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Która linijka kodu jest poprawnie zakomentowana",
+    "code": "Comment: Linijka 1\n# Linijka 2\n// Linijka 3\n-- Linijka 4",
+    "options": ["Linijka 1","Linijka 2","Linijka 3","Linijka 4"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Jaką wartość przyjmie zmienna x",
+    "code": "x: float = 11 // 4",
+    "options": ["2.5","2","3","2.75"],
+    "correctAnswer": 1
+  },
+  { 
+    "question": "Co wyświetlli instrukcja print?", 
+    "code": "a = [1,2,3,4] \nfor i in a: \n\tfor j in range(2): \n\t\tif i % 2 == 0: \n\t\t\ta.remove(i) \nprint(a)",
+    "options": ["[1,2]", "[1,2,3,4]", "[1,3,4]", "Error"], 
+    "correctAnswer": 3 
+  },
+  { 
+    "question": "Czy podany kod poprawnie oblicza wartość dziesiętną liczby binarnej x, jaka jest jej poprawna wartość",
+    "code": "x = \"10011011\" \nx_i = int(x) \np = 1 \nwartosc_dziesietna = 0 \nwhile x_i > 0: \n\twartosc_dziesietna += (x_i % 10) * p \n\tx_i //= 10 \n\tp *= 2 \nprint(wartosc_dziesietna)",
+    "options": ["Poprawnie, 155", "Poprawnie, 310", "Niepoprawnie, 155", "Niepoprawnie, 310"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Która lub które linijki kodu zadziałają",
+    "code": "retsym: int = 21\nmyster: set[list[dict[int, int]]] = 37\nbartlomiej: list[dict[list[set[int]], None]] = [[[[[5]]]]]",
+    "options": ["Linijka 1", "Linijka 2 i 3", "Wszystkie zadziałają", "Żadna nie zadziała"],
+    "correctAnswer": 2
+  },
+  { 
+    "question": "Co zostanie wyświetlone w konsoli po wykonaniu kodu?", 
+    "code": "x = 15 \ny = -15 \nif x + y == 0: \n\tprint(\"Wiktoria\") \n\tpass\nelse: \n\tprint(\"Aleksander\")\n\tpass",
+    "options": ["Wiktoria", "Aleksander", "Olaf", "Julia"], 
+    "correctAnswer": 0 
+  },
+  { 
+    "question": "Zaznacz warunek, który jest prawdziwy?", 
+    "code": "",
+    "options": ["15 >= 20 or 2 < 0", "-20 < 30 or False", "15 <= 20 and 2 < 0", "True and False and True"], 
+    "correctAnswer": 2 
+  },
+  { 
+    "question": "Co zostanie wyświetlone w konsoli po wykonaniu kodu?", 
+    "code": "x = 5 \nfor i in range(3):\n\tx = x + i\nprint(x)",
+    "options": ["8", "11", "10", "5"], 
+    "correctAnswer": 0
+  },
+  { 
+    "question": "Co zwróci poniższy kod?", 
+    "code": "sentence = \"I love Python\"\nprint(sentence.split())",
+    "options": ["Error", "['I','love','Python']", "['I love Python']", "['I','love Python']"], 
+    "correctAnswer": 1
+  },
+  { 
+    "question": "", 
+    "code": "x = 5\nif x > 10:\n\tprint(\"Large\")\n\tpass\nelif x > 3:\n\tprint(\"Medium\")\n\tpass\nelse:\n\tprint(\"Small\")\n\tpass",
+    "options": ["Large", "Small", "Medium", "Error"], 
+    "correctAnswer": 2
+  }
+]

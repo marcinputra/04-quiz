@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "Która linijka kodu jest poprawnie zakomentowana?",
+    "code": "Comment: Linijka 1\n# Linijka 2\n// Linijka 3\n-- Linijka 4",
+    "options": ["Linijka 1","Linijka 2","Linijka 3","Linijka 4"],
+    "correctAnswer": 1
+  },
+  { 
+    "id": 2,
+    "question": "Do wczytania danych od użytkownika służy instrukcja?",
+    "code": "",
+    "options": ["print()", "input()", "cout()", "abs()"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "question": "Jaką wartość przyjmie zmienna x",
+    "code": "x: float = 11 // 4",
+    "options": ["2.5","2","3","2.75"],
+    "correctAnswer": 1
+  },
+  { 
+    "id": 4,
+    "question": "Co wyświetlli instrukcja print?", 
+    "code": "a = 10000 \nprint(\"a\")",
+    "options": ["a", "10000", "Error", "\"a\""], 
+    "correctAnswer": 0 
+  },
+  {
+    "id": 5,
+    "question": "Co będzie wynikiem poniższego kodu?",
+    "code": "a = 12\nb = 23\nprint(a+b)",
+    "options": ["35", "a+b", "1223", "12+23"],
+    "correctAnswer": 0
+  },
+  {
+    "id": 6,
+    "question": "Co będzie wynikiem poniższego kodu?",
+    "code": "a = \"12\"\nb = \"23\"\nprint(a+b)",
+    "options": ["35", "a+b", "1223", "12+23"],
+    "correctAnswer": 2
+  },
+  { 
+    "id": 7,
+    "question": "Jaką wartość przyjmie zmienna x?", 
+    "code": "x = bool(1)",
+    "options": ["x przyjmie wartość 1", "x przyjmie wartość False", "x przyjmie wartość True", "x przyjmie wartość -1"], 
+    "correctAnswer": 2
+  },
+  { 
+    "id": 8,
+    "question": "Która deklaracja nazwy zmiennej jest niepoprawna?", 
+    "code": "",
+    "options": ["moja_nowa_1zmienna", "nowa_1zmienna_moja", "1zmienna_moja_nowa", "zmienna_nowa_moja"], 
+    "correctAnswer": 2 
+  },
+  { 
+    "id": 9,
+    "question": "Jaka wartość przyjmie zmienna x po wykonaniu poniższego kodu?", 
+    "code": "y = 12\nx = y * 2\nx = 12 // y + x",
+    "options": ["12", "24", "3", "25"], 
+    "correctAnswer": 3 
+  },
+  { 
+    "id": 10,
+    "question": "Ile wynosi zmienna y po wykonaniu poniższego kodu?", 
+    "code": "x = 5 \ny = 3\ny = x + y + len(\"matura\")",
+    "options": ["8", "11", "14", "Error"], 
+    "correctAnswer": 2
+  }
+]

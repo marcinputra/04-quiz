@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Na czym polega sortowanie bąbelkowe?",
+    "code": "",
+    "options": [
+      "Na wielokrotnym porównywaniu sąsiednich elementów i zamienianiu ich miejscami",
+      "Na dzieleniu tablicy na mniejsze podtablice",
+      "Na wybieraniu najmniejszego elementu i wstawianiu go na początek",
+      "Na wstawianiu elementów do drzewa binarnego"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 2,
+    "question": "Który algorytm działa bez użycia rekurencji?",
+    "code": "",
+    "options": [
+      "Sortowanie szybkie",
+      "Sortowanie bąbelkowe",
+      "Sortowanie przez scalanie",
+      "Sortowanie kopcowe"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "question": "Co robi poniższy fragment kodu?",
+    "code": "for i in range(1, len(arr)):\n    key = arr[i]\n    j = i - 1\n    while j >= 0 and arr[j] > key:\n        arr[j + 1] = arr[j]\n        j -= 1\n    arr[j + 1] = key",
+    "options": [
+      "Realizuje sortowanie przez wybieranie",
+      "Realizuje sortowanie przez wstawianie",
+      "Realizuje sortowanie szybkie",
+      "Realizuje sortowanie bąbelkowe"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 4,
+    "question": "Kiedy sortowanie przez wstawianie jest szczególnie efektywne?",
+    "code": "",
+    "options": [
+      "Dla bardzo dużych i losowych zbiorów danych",
+      "Dla danych prawie posortowanych",
+      "Dla danych w odwrotnej kolejności",
+      "Zawsze ma taką samą wydajność"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "Na czym polega sortowanie przez wybieranie?",
+    "code": "",
+    "options": [
+      "Na wielokrotnym zamienianiu sąsiednich elementów",
+      "Na dzieleniu tablicy względem elementu pivot",
+      "Na wyszukiwaniu najmniejszego elementu i umieszczaniu go na właściwej pozycji",
+      "Na rekurencyjnym scalaniu tablic"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "Jaka jest cecha charakterystyczna sortowania przez wybieranie?",
+    "code": "",
+    "options": [
+      "Ma najlepszą złożoność O(n log n)",
+      "Zawsze wykonuje taką samą liczbę porównań",
+      "Jest algorytmem rekurencyjnym",
+      "Wymaga dodatkowej pamięci"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 7,
+    "question": "Co oznacza pivot w sortowaniu szybkim?",
+    "code": "",
+    "options": [
+      "Najmniejszy element tablicy",
+      "Element używany do podziału tablicy na mniejsze części",
+      "Środkowy indeks tablicy",
+      "Ostatni element zawsze zamieniany miejscami"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "Co będzie wynikiem poniższego kodu?",
+    "code": "arr = [3, 1, 2]\nfor i in range(len(arr)):\n    for j in range(0, len(arr) - i - 1):\n        if arr[j] > arr[j + 1]:\n            arr[j], arr[j + 1] = arr[j + 1], arr[j]\nprint(arr)",
+    "options": [
+      "[3, 2, 1]",
+      "[1, 2, 3]",
+      "[2, 3, 1]",
+      "[1, 3, 2]"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "question": "Co zrobi poniższy kod?",
+    "code": "def alg(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr)//2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)",
+    "options": [
+      "Posortuje listę algorytmem bąbelkowym",
+      "Posortuje listę algorytmem przez wybieranie",
+      "Posortuje listę algorytmem szybkim",
+      "Usunie duplikaty z listy"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "Który algorytm sortowania jest najszybszy średnio dla dużych zbiorów danych?",
+    "code": "",
+    "options": [
+      "Sortowanie bąbelkowe",
+      "Sortowanie przez wstawianie",
+      "Sortowanie przez wybieranie",
+      "Sortowanie szybkie"
+    ],
+    "correctAnswer": 3
+  }
+]

@@ -1,0 +1,206 @@
+[
+    {
+        "id": 1,
+        "question": "Co oznacza poniższa definicja tabeli?",
+        "code": "CREATE TABLE user_profiles (\n  user_id BIGINT PRIMARY KEY,\n  FOREIGN KEY (user_id) REFERENCES users(user_id)\n);",
+        "options": [
+            "Relacja 1:N",
+            "Relacja 1:1",
+            "Brak relacji",
+            "Relacja N:M"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 2,
+        "question": "Co robi poniższy kod?",
+        "code": "FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)",
+        "options": [
+            "Tworzy klucz główny",
+            "Tworzy relację między tabelami",
+            "Usuwa dane",
+            "Tworzy indeks"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 3,
+        "question": "Jaką relację przedstawia ten kod?",
+        "code": "CREATE TABLE Orders (\n  OrderID INT PRIMARY KEY,\n  CustomerID INT,\n  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)\n);",
+        "options": [
+            "1:1",
+            "N:M",
+            "1:N",
+            "Brak relacji"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "question": "Co oznacza klucz złożony w poniższym przykładzie?",
+        "code": "PRIMARY KEY (order_id, product_id)",
+        "options": [
+            "Klucz główny składa się z jednej kolumny",
+            "Zapewnia unikalność kombinacji dwóch kolumn",
+            "Tworzy relację 1:1",
+            "Usuwa duplikaty automatycznie"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 5,
+        "question": "Co robi opcja ON DELETE CASCADE?",
+        "code": "FOREIGN KEY (user_id)\nREFERENCES users(user_id)\nON DELETE CASCADE",
+        "options": [
+            "Blokuje usunięcie rekordu",
+            "Ustawia NULL",
+            "Tworzy indeks",
+            "Usuwa powiązane rekordy"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 6,
+        "question": "Co robi poniższe pole?",
+        "code": "email VARCHAR(320) NOT NULL UNIQUE",
+        "options": [
+            "Zapewnia unikalność wartości",
+            "Pozwala na duplikaty",
+            "Tworzy klucz obcy",
+            "Usuwa rekordy"
+        ],
+        "correctAnswer": 0
+    },
+     {
+        "id": 7,
+        "question": "Czym jest relacja jeden-do-jednego (1:1) w bazie danych?",
+        "code": "",
+        "options": [
+            "Każdy rekord jednej tabeli może mieć wiele powiązań z drugą tabelą",
+            "Jedna tabela nie może mieć relacji z drugą",
+            "Każdy rekord jednej tabeli ma dokładnie jeden odpowiadający rekord w drugiej tabeli",
+            "Relacja nie wymaga kluczy obcych"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 8,
+        "question": "Jak realizuje się relację wiele-do-wielu (N:M)?",
+        "code": "",
+        "options": [
+            "Poprzez dodanie kolumny UNIQUE",
+            "Poprzez usunięcie klucza głównego",
+            "Poprzez użycie tylko jednej tabeli",
+            "Poprzez tabelę pośrednią (łącznikową)"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 9,
+        "question": "Jaką funkcję pełni PRIMARY KEY w tym kodzie?",
+        "code": "user_id BIGINT PRIMARY KEY AUTO_INCREMENT",
+        "options": [
+            "Tworzy relację",
+            "Tworzy indeks ręcznie",
+            "Zapewnia unikalność rekordu",
+            "Usuwa dane"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 10,
+        "question": "Co robi poniższy kod INSERT?",
+        "code": "INSERT INTO Orders (OrderID, CustomerID) VALUES (1, 10);",
+        "options": [
+            "Dodaje rekord powiązany z klientem",
+            "Tworzy relację",
+            "Usuwa rekord",
+            "Tworzy indeks"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 11,
+        "question": "Co robi poniższe zapytanie?",
+        "code": "SELECT o.order_id, SUM(o.qty * o.unit_price) AS total\nFROM order_items o\nGROUP BY o.order_id;",
+        "options": [
+            "Usuwa dane",
+            "Liczy sumę wartości zamówienia",
+            "Tworzy relację",
+            "Dodaje rekord"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 12,
+        "question": "Co oznacza ALTER TABLE w tym przykładzie?",
+        "code": "ALTER TABLE orders\nADD CONSTRAINT fk_user_orders\nFOREIGN KEY (user_id)\nREFERENCES users(id);",
+        "options": [
+            "Tworzy nową tabelę",
+            "Usuwa tabelę",
+            "Tworzy indeks",
+            "Dodaje klucz obcy do istniejącej tabeli"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 13,
+        "question": "W której tabeli znajduje się klucz obcy w relacji 1:N?",
+        "code": "",
+        "options": [
+            "Po stronie 'wiele'",
+            "Po stronie 'jeden'",
+            "W obu tabelach zawsze",
+            "W żadnej tabeli"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 14,
+        "question": "Która cecha dotyczy PRIMARY KEY?",
+        "code": "",
+        "options": [
+            "Może być NULL",
+            "Może się powtarzać",
+            "Jest unikalny i NOT NULL",
+            "Nie tworzy indeksu"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 15,
+        "question": "Do czego służy PRIMARY KEY?",
+        "code": "",
+        "options": [
+            "Do łączenia tabel",
+            "Do identyfikacji unikalnego rekordu w tabeli",
+            "Do przechowywania wielu wartości",
+            "Do tworzenia indeksów tylko ręcznie"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 16,
+        "question": "Co oznacza FOREIGN KEY?",
+        "code": "",
+        "options": [
+            "Klucz główny tabeli",
+            "Ograniczenie zapewniające unikalność",
+            "Powiązanie z rekordem w innej tabeli",
+            "Indeks przyspieszający zapytania"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 17,
+        "question": "Czym jest tabela łącznikowa?",
+        "code": "",
+        "options": [
+            "Tabela bez klucza głównego",
+            "Tabela służąca do relacji 1:1",
+            "Tabela łącząca dwie inne w relacji N:M",
+            "Tabela przechowująca tylko indeksy"
+        ],
+        "correctAnswer": 2
+    }
+]

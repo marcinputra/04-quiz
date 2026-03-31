@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "question": "Jakie polecenie dodaje klucz podstawowy do istniejącej tabeli?",
+        "code": "",
+        "options": [
+        "ALTER TABLE klienci ADD KEY PRIMARY (id);",
+        "ALTER TABLE klienci ADD PRIMARY id;",
+        "ALTER TABLE klienci ADD CONSTRAINT pk PRIMARY KEY (id);",
+        "ALTER TABLE klienci SET PRIMARY KEY id;"
+      ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 2,
+        "question": "Jak usunąć klucz podstawowy z tabeli?",
+        "code": "",
+        "options": [
+          "ALTER TABLE klienci REMOVE PRIMARY;",
+          "ALTER TABLE klienci DROP PRIMARY KEY;",
+          "ALTER TABLE klienci DELETE PRIMARY KEY;",
+          "ALTER TABLE klienci CLEAR PRIMARY KEY;"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 3,
+        "question": "Jak usunąć kolumnę o nazwie np. 'nip' z tabeli 'klienci'?",
+        "code": "ALTER TABLE orders DROP COLUMN discount;",
+        "options": [
+          "ALTER TABLE klienci DELETE nip;",
+          "ALTER TABLE klienci REMOVE COLUMN nip;",
+          "ALTER TABLE klienci DROP COLUMN nip;",
+          "ALTER TABLE klienci CLEAR nip;"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "question": "Do jakiego typu kolumny można dodać AUTO_INCREMENT?",
+        "code": "",
+        "options": [
+          "Do dowolnej kolumny",
+          "Tylko do kolumny będącej kluczem głównym",
+          "Tylko do kolumn tekstowych",
+          "Tylko do kolumn typu DATE"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 5,
+        "question": "Jak ustawić wartość domyślną dla kolumny 'imie'?",
+        "code": "",
+        "options": [
+          "ALTER TABLE klienci SET DEFAULT imie 'nie wprowadzono';",
+          "ALTER TABLE klienci ALTER COLUMN imie SET DEFAULT 'nie wprowadzono';",
+          "ALTER TABLE klienci MODIFY DEFAULT imie 'nie wprowadzono';",
+          "ALTER TABLE klienci CHANGE imie DEFAULT 'nie wprowadzono';"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 6,
+        "question": "Jak zmienić nazwę tabeli z 'old_name' na 'new_name'?",
+        "code": "",
+        "options": [
+            "ALTER TABLE old_name RENAME TO new_name;", 
+            "CHANGE TABLE old_name TO new_name;", 
+            "UPDATE TABLE old_name SET new_name;", 
+            "MODIFY TABLE old_name AS new_name;"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 7,
+        "question": "Do czego służy polecenie ALTER TABLE?",
+        "code": "",
+        "options": [
+            "Do usuwania całych baz danych",
+            "Do zmiany struktury istniejącej tabeli",
+            "Do wstawiania nowych rekordów do tabeli",
+            "Do tworzenia nowych użytkowników bazy danych"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 8,
+        "question": "Która komenda zmienia typ danych kolumny 'price' na liczbę dziesiętną?",
+        "code": "",
+        "options": [
+            "CHANGE TABLE products COLUMN price DECIMAL(10,2);", 
+            "UPDATE TABLE products SET price DECIMAL(10,2);", 
+            "ALTER TABLE products MODIFY COLUMN price DECIMAL(10,2);", 
+            "MODIFY TABLE products COLUMN price DECIMAL(10,2);"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 9,
+        "question": "Do czego służy polecenie TRUNCATE TABLE?",
+        "code": "",
+        "options": [
+            "Do usunięcia jednej kolumny z tabeli",
+            "Do zmiany nazwy tabeli",
+            "Do usunięcia wszystkich danych z tabeli",
+            "Do usunięcia klucza podstawowego"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 10,
+        "question": "Co robi atrybut UNIQUE w kolumnie tabeli?",
+        "code": "",
+        "options": [
+            "Pozwala na przechowywanie tylko liczb",
+            "Automatycznie zwiększa wartość pola",
+            "Zapobiega wprowadzaniu powtarzających się wartości",
+            "Usuwa wartości NULL"
+        ],
+        "correctAnswer": 2
+    }
+]

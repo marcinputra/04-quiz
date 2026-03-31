@@ -1,0 +1,97 @@
+[
+  
+  {
+    "id": "python-zajecia-02",
+    "title": "Quiz do zajęć z nauki programowania w Pythonie (Z02)",
+    "content":
+      "Podstawowe instrukcje wprowadzania danych, wyświetlania wyników. Komentarze. Zmienne.",
+    "level": "podstawowy",
+    "questions": 12,
+    "topic": "Python"
+  },
+  {
+    "id": "python-zajecia-03",
+    "title": "Quiz do zajęć z nauki programowania w Pythonie (Z03)",
+    "content":
+      "Operatory i wyniki ich działania.",
+    "level": "podstawowy",
+    "questions": 15,
+    "topic": "Python"
+  },
+  {
+    "id": "python-podstawy-1",
+    "title": "Wstęp do programowania w Pythonie (PP01)",
+    "content":
+      "Podstawowe instrukcje wprowadzania danych, wyświetlania wyników. Komentarze. Zmienne. Operatory arytmetyczne.",
+    "level": "podstawowy",
+    "questions": 10,
+    "topic": "Python"
+  },
+  {
+    "id": "python-podstawy-2",
+    "title": "Wstęp do programowania w Pythonie (PP02)",
+    "content": "Podstawowe instrukcje warunkowe. Pętle iteracyjne while i for.",
+    "level": "podstawowy",
+    "questions": 10,
+    "topic": "Python"
+  },
+  {
+    "id": "python-srednio-1",
+    "title": "Sortowanie w Pythonie (PS01)",
+    "content":
+      "Sortowanie bąbelkowe, przez wstawienie, przez wybieranie, szybkie.",
+    "level": "średniozaawansowany",
+    "questions": 10,
+    "topic": "Python"
+  },
+    {
+    "id": "python-algorytm-8",
+    "title": "Quiz do zajęć z nauki algorytmiki w Pythonie (A08)",
+    "content":
+      "Wyszukiwnaie binarne.",
+    "level": "podstawowy",
+    "questions": 12,
+    "topic": "Algorytm"
+  },
+  {
+    "id": "sql-podstawy-1",
+    "title": "Wstęp do zapytań w SQL (SP01)",
+    "level": "podstawowy",
+    "questions": 10,
+    "content": "Podstawowe zapytania i operacje wykonywane na danych w bazie danych. SELECT, WHERE, CREATE. ",
+    "topic": "Bazy danych"
+  },
+  {
+    "id": "sql-podstawy-2",
+    "title": "Tworzenie i modyfikacja baz danych w SQL (SP02)",
+    "level": "rozszerzony",
+    "questions": 10,
+    "content": "Podstawowe instrukcje zmieniające strukturę bazy danych, usuwanie obiektów baz danych. ",
+    "topic": "Bazy danych"
+  },
+
+    {
+    "id": "sql-podstawy-3",
+    "title": "Łączenie tabel JOIN, RIGHT JOIN, LEFT JOIN (SR04)",
+    "level": "rozszerzony",
+    "questions": 9,
+    "content": "Podstawowe instrukcje zmieniające strukturę bazy danych, usuwanie obiektów baz danych. ",
+    "topic": "Bazy danych"
+  },
+  {
+    "id": "sql-podstawy-4",
+    "title": "Modyfikacja baz danych w SQL (SR08)",
+    "level": "podstawowy",
+    "questions": 10,
+    "content": "Podstawowe instrukcje zmieniające strukturę bazy danych, usuwanie obiektów baz danych. ",
+    "topic": "Bazy danych"
+  },
+  {
+    "id": "sql-zaawansowany-1",
+    "title": "Tworzenie i modyfikacja baz danych w SQL (SP03)",
+    "level": "podstawowy",
+    "questions": 10,
+    "content": "Podstawowe instrukcje zmieniające strukturę bazy danych, usuwanie obiektów baz danych. ",
+    "topic": "Bazy danych"
+  }  
+]
