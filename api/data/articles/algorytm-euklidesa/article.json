@@ -1,0 +1,7 @@
+{
+  "slug": "algorytm-euklidesa",
+  "title": "Algorytm Euklidesa — NWD i NWW w Pythonie",
+  "excerpt": "Jak w trzech linijkach kodu policzyć największy wspólny dzielnik? Algorytm Euklidesa krok po kroku, wersja z resztą i z odejmowaniem (499 999 kroków zamiast 1), NWW i gotowe funkcje math.gcd i math.lcm.",
+  "coverUrl": "/artykuly/euklides-okladka.webp",
+  "content": "content.md"
+}

@@ -1958,3 +1958,21 @@ Wcześniej stopka miała na stałe 90 px pustego miejsca na dole (na pasek infor
 - bez przewijania w bok, bez błędów JS, `vite build` bez błędów.
 
 Wdrożenie: `docker compose up -d --build`.
+
+---
+
+## Artykuł „Algorytm Euklidesa — NWD i NWW w Pythonie”
+
+Siódmy artykuł z pliku (`import:article`), **krótki** (ok. 2500 znaków). Adres: `/artykuly/algorytm-euklidesa`, opublikowany.
+
+- idea i tabela kroków dla NWD(48, 18) = 6,
+- kod iteracyjny (`a, b = b, a % b`) i rekurencyjny,
+- wersja z odejmowaniem i porównanie liczby kroków (np. 1 000 000 i 2: 499 999 kroków zamiast 1), złożoność O(log n),
+- NWW ze wzoru `a * b // nwd(a, b)`, `math.gcd` / `math.lcm` (także dla wielu liczb),
+- zastosowania: skracanie ułamków, liczby względnie pierwsze, RSA; link do lekcji 16 kursu Python.
+
+**Okładka:** `client/public/artykuly/euklides-okladka.webp`.
+
+**Sprawdzone:** tabela kroków i liczby kroków policzone programem; wszystkie bloki kodu uruchomione; najgorszy przypadek dla liczb do 10⁹ (kolejne liczby Fibonacciego) — 42 kroki, zgodnie z tekstem („kilkadziesiąt”); przeglądarka (1280 i 375 px) bez błędów.
+
+**Wdrożenie:** `docker compose up -d --build`, potem `docker compose exec api node scripts/import-article.js algorytm-euklidesa`.
