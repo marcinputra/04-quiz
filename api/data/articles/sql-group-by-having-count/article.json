@@ -1,0 +1,7 @@
+{
+  "slug": "sql-group-by-having-count",
+  "title": "Podstawy SQL: grupowanie danych i liczenie wyników — GROUP BY, HAVING, COUNT",
+  "excerpt": "Jak policzyć uczniów w każdej klasie, średnią z każdego przedmiotu albo znaleźć uczniów ze średnią powyżej 4,5? Funkcje COUNT, SUM, AVG, MIN, MAX, klauzule GROUP BY i HAVING, różnica między WHERE a HAVING i najczęstsze pułapki — na przykładach z wynikami.",
+  "coverUrl": "/artykuly/sql-group-by-okladka.webp",
+  "content": "content.md"
+}

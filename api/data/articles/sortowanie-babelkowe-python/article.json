@@ -1,0 +1,7 @@
+{
+  "slug": "sortowanie-babelkowe-python",
+  "title": "Sortowanie bąbelkowe w Pythonie — krótko i na przykładzie",
+  "excerpt": "Najprostszy algorytm sortowania w pigułce: idea, przykład krok po kroku, kod w Pythonie z dwiema optymalizacjami, złożoność O(n²) i pomiar — dlaczego sorted() jest 1700 razy szybsze.",
+  "coverUrl": "/artykuly/sortowanie-babelkowe-okladka.webp",
+  "content": "content.md"
+}

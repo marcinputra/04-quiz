@@ -1,0 +1,266 @@
+/* Strony konta: logowanie, rejestracja, moje konto, panel admina */
+
+.mzi-auth-page {
+  min-height: calc(100vh - 56px);
+  background-color: #262a2b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #e5e7eb;
+}
+
+.mzi-auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, #262a2b, #262a2b67);
+  border: 1px solid #e5e7eb33;
+  box-shadow: 0 0 20px #e5e7eb30;
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+
+.mzi-auth-page-wide .mzi-auth-card {
+  max-width: 900px;
+}
+
+.mzi-auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mzi-auth-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+.mzi-auth-subtitle {
+  font-size: 18px;
+  margin: 8px 0 12px;
+}
+
+.mzi-auth-label {
+  font-size: 14px;
+  color: #d88f2c;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+/* podwójna klasa, żeby wygrać z globalnym input[type=text] ze StartScreen.css */
+.mzi-auth-form .mzi-auth-input {
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d88f2c;
+  border-radius: 6px;
+  background-color: #1f2324;
+  color: #e5e7eb;
+  transition: border-color .2s;
+}
+
+.mzi-auth-form .mzi-auth-input:focus {
+  border-color: #facc15;
+  outline: 2px solid #facc1555;
+  outline-offset: 1px;
+}
+
+.mzi-auth-submit {
+  margin-top: 20px;
+  padding: 11px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #facc15;
+  color: #262a2b;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.mzi-auth-submit:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.mzi-auth-error {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #e17b7b22;
+  border: 1px solid #e17b7b;
+  color: #f3a5a5;
+  font-size: 14px;
+}
+
+.mzi-auth-success {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #68c79722;
+  border: 1px solid #68c797;
+  color: #9fe0bf;
+  font-size: 14px;
+}
+
+.mzi-auth-muted {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #aab2c5;
+}
+
+.mzi-auth-link {
+  color: #facc15;
+}
+
+.mzi-auth-loading {
+  color: #e5e7eb;
+  padding: 40px;
+  text-align: center;
+  background-color: #262a2b;
+}
+
+.mzi-auth-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.mzi-auth-details dt {
+  color: #aab2c5;
+}
+
+.mzi-auth-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* tabela w panelu admina */
+.mzi-admin-table-wrap {
+  overflow-x: auto;
+}
+
+.mzi-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.mzi-admin-table th,
+.mzi-admin-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb22;
+  white-space: nowrap;
+}
+
+.mzi-admin-table th {
+  color: #d88f2c;
+  font-weight: 600;
+}
+
+/* --- krok 7: potwierdzenie e-maila, kod logowania, 2FA --- */
+
+.mzi-auth-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #d1d5db;
+}
+
+.mzi-auth-text strong { color: #e5e7eb; }
+
+.mzi-auth-secondary {
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #d88f2c;
+  background: transparent;
+  color: #d88f2c;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mzi-auth-secondary:hover:not(:disabled) { background-color: #d88f2c22; }
+.mzi-auth-secondary:disabled { opacity: .5; cursor: default; }
+
+.mzi-auth-linkbtn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #aab2c5;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mzi-auth-form .mzi-auth-input.mzi-auth-code {
+  font-size: 28px;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.mzi-resend {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.mzi-resend .mzi-auth-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d88f2c;
+  border-radius: 6px;
+  background-color: #1f2324;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.mzi-auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mzi-auth-btnlink {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  padding: 10px 18px;
+  margin-top: 8px;
+}
+
+/* sekcja 2FA w „Moje konto” */
+.mzi-account-section {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb22;
+}
+
+.mzi-account-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.mzi-account-status-on { background-color: #68c79733; color: #9fe0bf; border: 1px solid #68c797; }
+.mzi-account-status-off { color: #aab2c5; border: 1px solid #aab2c566; }
+
+/* link „Nie pamiętasz hasła?” pod polem hasła */
+.mzi-auth-forgot {
+  margin-top: 6px;
+  font-size: 13px;
+  text-align: right;
+}

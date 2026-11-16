@@ -1,0 +1,27 @@
+{
+  "slug": "javascript-od-podstaw",
+  "title": "JavaScript od podstaw do aplikacji",
+  "lessons": [
+    { "file": "01-wprowadzenie.md", "title": "Wprowadzenie: pierwszy skrypt i konsola" },
+    { "file": "02-zmienne-typy.md", "title": "Zmienne i typy danych" },
+    { "file": "03-operatory.md", "title": "Operatory i wyrażenia" },
+    { "file": "04-warunki.md", "title": "Instrukcje warunkowe" },
+    { "file": "05-petle.md", "title": "Pętle" },
+    { "file": "06-funkcje.md", "title": "Funkcje" },
+    { "file": "07-tablice.md", "title": "Tablice — podstawy" },
+    { "file": "08-metody-tablic.md", "title": "Metody tablic: map, filter, reduce i inne" },
+    { "file": "09-obiekty.md", "title": "Obiekty, destrukturyzacja i spread" },
+    { "file": "10-teksty-liczby-daty.md", "title": "Teksty, liczby, Math i daty" },
+    { "file": "11-dom.md", "title": "DOM: wyszukiwanie i zmiana elementów" },
+    { "file": "12-zdarzenia.md", "title": "Zdarzenia i ich obsługa" },
+    { "file": "13-formularze.md", "title": "Formularze i walidacja w JavaScripcie" },
+    { "file": "14-zakres-domkniecia.md", "title": "Zakres, hoisting, domknięcia i this" },
+    { "file": "15-klasy.md", "title": "Klasy i programowanie obiektowe" },
+    { "file": "16-bledy-debugowanie.md", "title": "Obsługa błędów i debugowanie" },
+    { "file": "17-asynchronicznosc.md", "title": "Asynchroniczność: timery, Promise i async/await" },
+    { "file": "18-fetch-json.md", "title": "Fetch API i JSON — dane z serwera" },
+    { "file": "19-moduly-localstorage.md", "title": "Moduły ES i zapisywanie danych w przeglądarce" },
+    { "file": "20-projekt.md", "title": "Projekt końcowy: aplikacja „Lista zadań”" }
+  ],
+  "quiz": "quiz.json"
+}

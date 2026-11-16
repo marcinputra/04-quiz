@@ -1,0 +1,236 @@
+// Schemat bazy maturazinformatyki.it
+// Nazwy modeli/pól w camelCase (JS), w bazie snake_case (@map / @@map).
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  user
+  admin
+}
+
+enum ArticleStatus {
+  draft
+  published
+}
+
+enum EnrollmentStatus {
+  pending
+  approved
+  rejected
+}
+
+// ---------- UŻYTKOWNICY ----------
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique @db.VarChar(255)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  name         String   @db.VarChar(120)
+  role         Role     @default(user)
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  // potwierdzenie adresu e-mail (null = niepotwierdzony, nie może się zalogować)
+  emailVerifiedAt  DateTime? @map("email_verified_at") @db.Timestamptz
+  // logowanie dwuetapowe: po haśle kod wysyłany na e-mail
+  twoFactorEnabled Boolean   @default(false) @map("two_factor_enabled")
+  // zwiększane przy zmianie / resecie hasła — unieważnia wszystkie wcześniejsze sesje
+  tokenVersion     Int       @default(0) @map("token_version")
+
+  authCodes AuthCode[]
+
+  articles          Article[]
+  enrollments       Enrollment[]  @relation("EnrollmentUser")
+  decidedEnrollment Enrollment[]  @relation("EnrollmentDecidedBy")
+  attempts          QuizAttempt[]
+
+  @@map("users")
+}
+
+enum AuthCodePurpose {
+  verify_email // link potwierdzający adres e-mail po rejestracji
+  login_2fa // kod logowania dwuetapowego
+  enable_2fa // kod potwierdzający włączenie 2FA
+  password_reset // link do ustawienia nowego hasła
+}
+
+// Jednorazowe kody i tokeny wysyłane e-mailem. W bazie tylko skrót (hash), nigdy sam kod.
+model AuthCode {
+  id        Int             @id @default(autoincrement())
+  userId    Int             @map("user_id")
+  purpose   AuthCodePurpose
+  codeHash  String          @map("code_hash") @db.VarChar(128)
+  expiresAt DateTime        @map("expires_at") @db.Timestamptz
+  usedAt    DateTime?       @map("used_at") @db.Timestamptz
+  attempts  Int             @default(0) // nieudane próby wpisania kodu
+  createdAt DateTime        @default(now()) @map("created_at") @db.Timestamptz
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, purpose])
+  @@index([codeHash])
+  @@map("auth_codes")
+}
+
+// ---------- ARTYKUŁY ----------
+
+model Article {
+  id          Int           @id @default(autoincrement())
+  slug        String        @unique @db.VarChar(200)
+  title       String        @db.VarChar(255)
+  excerpt     String?
+  content     String // Markdown
+  coverUrl    String?       @map("cover_url") @db.VarChar(500)
+  status      ArticleStatus @default(draft)
+  authorId    Int?          @map("author_id")
+  publishedAt DateTime?     @map("published_at") @db.Timestamptz
+  createdAt   DateTime      @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime      @updatedAt @map("updated_at") @db.Timestamptz
+
+  author User? @relation(fields: [authorId], references: [id], onDelete: SetNull)
+
+  @@index([status, publishedAt])
+  @@map("articles")
+}
+
+// ---------- KURSY ----------
+
+model Course {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique @db.VarChar(200)
+  title       String   @db.VarChar(255)
+  description String?
+  isPublished Boolean  @default(false) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  lessons     Lesson[]
+  enrollments Enrollment[]
+  quizzes     Quiz[]
+
+  @@map("courses")
+}
+
+model Lesson {
+  id       Int    @id @default(autoincrement())
+  courseId Int    @map("course_id")
+  title    String @db.VarChar(255)
+  content  String // Markdown
+  position Int    @default(0)
+
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([courseId, position])
+  @@map("lessons")
+}
+
+// Prośba o dostęp do kursu -> ręczne zatwierdzenie przez admina
+model Enrollment {
+  userId      Int              @map("user_id")
+  courseId    Int              @map("course_id")
+  status      EnrollmentStatus @default(pending)
+  requestedAt DateTime         @default(now()) @map("requested_at") @db.Timestamptz
+  decidedAt   DateTime?        @map("decided_at") @db.Timestamptz
+  decidedById Int?             @map("decided_by")
+
+  user      User   @relation("EnrollmentUser", fields: [userId], references: [id], onDelete: Cascade)
+  course    Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  decidedBy User?  @relation("EnrollmentDecidedBy", fields: [decidedById], references: [id], onDelete: SetNull)
+
+  @@id([userId, courseId])
+  @@index([status])
+  @@map("enrollments")
+}
+
+// ---------- QUIZY ----------
+
+model Quiz {
+  id          Int     @id @default(autoincrement())
+  slug        String  @unique @db.VarChar(200) // dawne "id" z quizList.json, np. "sql-podstawy-1"
+  title       String  @db.VarChar(255)
+  description String?
+  level       String? @db.VarChar(50)
+  topic       String? @db.VarChar(100)
+  courseId    Int?    @map("course_id") // NULL = quiz dostępny dla każdego zalogowanego
+  isPublished Boolean @default(false) @map("is_published")
+  shuffle     Boolean @default(true)
+  lockOnLeave Boolean @default(false) @map("lock_on_leave") // opuszczenie karty kończy podejście
+  position    Int     @default(0) // kolejność na liście quizów
+
+  course    Course?       @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  questions Question[]
+  attempts  QuizAttempt[]
+
+  @@map("quizzes")
+}
+
+model Question {
+  id       Int     @id @default(autoincrement())
+  quizId   Int     @map("quiz_id")
+  question String
+  code     String?
+  position Int     @default(0)
+
+  quiz           Quiz            @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  options        AnswerOption[]
+  attemptAnswers AttemptAnswer[]
+
+  @@index([quizId, position])
+  @@map("questions")
+}
+
+model AnswerOption {
+  id         Int     @id @default(autoincrement())
+  questionId Int     @map("question_id")
+  text       String
+  isCorrect  Boolean @default(false) @map("is_correct")
+  position   Int     @default(0)
+
+  question       Question        @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  attemptAnswers AttemptAnswer[]
+
+  @@index([questionId, position])
+  @@map("answer_options")
+}
+
+// ---------- WYNIKI ----------
+
+model QuizAttempt {
+  id         Int       @id @default(autoincrement())
+  userId     Int       @map("user_id")
+  quizId     Int       @map("quiz_id")
+  score      Int       @default(0)
+  total      Int
+  startedAt  DateTime  @default(now()) @map("started_at") @db.Timestamptz
+  finishedAt DateTime? @map("finished_at") @db.Timestamptz
+  endReason  String?   @map("end_reason") @db.VarChar(30) // NULL = normalnie; "left_page" = opuszczenie karty
+
+  user    User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz    Quiz            @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  answers AttemptAnswer[]
+
+  @@index([userId])
+  @@index([quizId])
+  @@map("quiz_attempts")
+}
+
+// Jedna odpowiedź na pytanie w danym podejściu (brak możliwości zmiany)
+model AttemptAnswer {
+  attemptId  Int     @map("attempt_id")
+  questionId Int     @map("question_id")
+  optionId   Int     @map("option_id")
+  isCorrect  Boolean @map("is_correct")
+
+  attempt  QuizAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question Question     @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  option   AnswerOption @relation(fields: [optionId], references: [id])
+
+  @@id([attemptId, questionId])
+  @@map("attempt_answers")
+}

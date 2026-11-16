@@ -1,0 +1,27 @@
+{
+  "slug": "html5-od-podstaw",
+  "title": "HTML5 — część 1: od podstaw",
+  "lessons": [
+    {
+      "file": "01-wprowadzenie.md",
+      "title": "Wprowadzenie i struktura dokumentu HTML5"
+    },
+    {
+      "file": "02-tekst-listy-linki.md",
+      "title": "Tekst, nagłówki, listy i linki"
+    },
+    {
+      "file": "03-obrazy-multimedia.md",
+      "title": "Obrazy i multimedia"
+    },
+    {
+      "file": "04-tabele-formularze.md",
+      "title": "Tabele i formularze"
+    },
+    {
+      "file": "05-semantyka.md",
+      "title": "Semantyczny HTML5 i projekt końcowy"
+    }
+  ],
+  "quiz": "quiz.json"
+}

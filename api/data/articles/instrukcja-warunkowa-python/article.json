@@ -1,0 +1,7 @@
+{
+  "slug": "instrukcja-warunkowa-python",
+  "title": "Instrukcja warunkowa w Pythonie — przykłady z życia i kod",
+  "excerpt": "Parasol czy okulary, bilet ulgowy, ocena ze sprawdzianu, darmowa dostawa i logowanie — if, elif, else, and/or/not, wyrażenie warunkowe i match pokazane na codziennych sytuacjach, z najczęstszymi błędami.",
+  "coverUrl": "/artykuly/instrukcja-warunkowa-okladka.webp",
+  "content": "content.md"
+}

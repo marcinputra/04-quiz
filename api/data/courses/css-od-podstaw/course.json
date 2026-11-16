@@ -1,0 +1,16 @@
+{
+  "slug": "css-od-podstaw",
+  "title": "CSS od podstaw do layoutu",
+  "lessons": [
+    { "file": "01-wprowadzenie.md", "title": "Wprowadzenie: składnia, selektory i kaskada" },
+    { "file": "02-kolory-jednostki-typografia.md", "title": "Kolory, jednostki i typografia" },
+    { "file": "03-model-pudelkowy.md", "title": "Model pudełkowy: margin, padding, border" },
+    { "file": "04-selektory-pseudoklasy.md", "title": "Zaawansowane selektory, pseudoklasy i pseudoelementy" },
+    { "file": "05-flexbox.md", "title": "Flexbox — układ w jednym wymiarze" },
+    { "file": "06-grid.md", "title": "CSS Grid — układ w dwóch wymiarach" },
+    { "file": "07-responsywnosc.md", "title": "Responsywność: media queries i mobile-first" },
+    { "file": "08-pozycjonowanie-animacje.md", "title": "Pozycjonowanie, transformacje i animacje" },
+    { "file": "09-zmienne-projekt.md", "title": "Zmienne CSS, tryb ciemny i projekt końcowy" }
+  ],
+  "quiz": "quiz.json"
+}

@@ -1,0 +1,129 @@
+/* Strony z wynikami: Moje wyniki, szczegóły podejścia, wyniki w panelu admina */
+
+.mzi-results-gap {
+  margin-top: 28px;
+}
+
+.mzi-admin-table td.mzi-results-title {
+  white-space: normal;
+  min-width: 200px;
+}
+
+.mzi-results-badge {
+  display: inline-block;
+  min-width: 46px;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2324;
+}
+
+.mzi-results-badge-good { background-color: #68c797; }
+.mzi-results-badge-mid  { background-color: #facc15; }
+.mzi-results-badge-low  { background-color: #e17b7b; }
+
+.mzi-results-summary {
+  color: #aab2c5;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.mzi-results-summary strong {
+  color: #e5e7eb;
+}
+
+.mzi-results-questions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mzi-results-question {
+  border: 1px solid #e5e7eb22;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.mzi-results-question p {
+  margin: 8px 0;
+}
+
+.mzi-results-question-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #aab2c5;
+  font-size: 14px;
+}
+
+.mzi-results-ok   { color: #68c797; font-weight: 700; }
+.mzi-results-bad  { color: #e17b7b; font-weight: 700; }
+.mzi-results-none { color: #aab2c5; font-style: italic; }
+
+.mzi-results-code.maturazinformatyki-quiz-code {
+  width: 100%;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+
+.mzi-results-options {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.mzi-results-option {
+  padding: 7px 10px;
+  margin: 4px 0;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  overflow-wrap: anywhere;
+}
+
+.mzi-results-option-correct {
+  border-color: #68c797;
+  background-color: #68c79722;
+}
+
+.mzi-results-option-wrong {
+  border-color: #e17b7b;
+  background-color: #e17b7b22;
+}
+
+.mzi-results-tag {
+  color: #aab2c5;
+  font-size: 13px;
+}
+
+.mzi-admin-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.mzi-admin-select {
+  max-width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d88f2c;
+  background-color: #1f2324;
+  color: #e5e7eb;
+}
+
+/* podejście zakończone automatycznie po opuszczeniu karty (opcja quizu lockOnLeave) */
+.mzi-results-left {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #f87171;
+  border-radius: 999px;
+  color: #fca5a5;
+  font-size: 0.8em;
+  white-space: nowrap;
+}

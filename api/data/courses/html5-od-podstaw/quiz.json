@@ -1,0 +1,163 @@
+{
+  "slug": "html5-sprawdzian",
+  "title": "HTML5 — część 1: sprawdzian (od podstaw)",
+  "description": "Quiz podsumowujący kurs HTML5: struktura dokumentu, tekst, linki, obrazy, tabele, formularze i semantyka.",
+  "topic": "HTML",
+  "level": "podstawowy",
+  "questions": [
+    {
+      "question": "Co musi znaleźć się w pierwszej linii dokumentu HTML5?",
+      "code": "",
+      "options": [
+        "<html lang=\"pl\">",
+        "<!DOCTYPE html>",
+        "<head>",
+        "<meta charset=\"UTF-8\">"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Do czego służy element <head>?",
+      "code": "",
+      "options": [
+        "Zawiera nagłówek widoczny na górze strony",
+        "Zawiera menu nawigacyjne",
+        "Zawiera największy nagłówek na stronie",
+        "Zawiera informacje o dokumencie (np. tytuł, kodowanie), które nie są wyświetlane w oknie"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Który zapis jest poprawny?",
+      "code": "A: <p>To jest <strong>ważne</p></strong>\nB: <p>To jest <strong>ważne</strong></p>\nC: <p>To jest <strong>ważne</p>\nD: <p>To jest </strong>ważne<strong></p>",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jak utworzyć listę numerowaną?",
+      "code": "",
+      "options": [
+        "<ul> z elementami <li>",
+        "<ol> z elementami <li>",
+        "<list type=\"number\">",
+        "<dl> z elementami <dt>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Dokąd prowadzi poniższy link, jeśli strona znajduje się w pliku galeria/zdjecia.html?",
+      "code": "<a href=\"../index.html\">Start</a>",
+      "options": [
+        "Do pliku galeria/index.html",
+        "Do strony głównej serwisu google.com",
+        "Do pliku index.html w folderze nadrzędnym (wyżej niż galeria/)",
+        "Link jest niepoprawny"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Dlaczego atrybut alt w znaczniku <img> jest ważny?",
+      "code": "",
+      "options": [
+        "Ustawia szerokość obrazu",
+        "Ustawia obraz jako tło strony",
+        "Kompresuje plik obrazu",
+        "Opisuje obraz dla czytników ekranu i wyświetla się, gdy obraz się nie załaduje"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Który atrybut sprawia, że element <video> wyświetla przyciski odtwarzania?",
+      "code": "",
+      "options": [
+        "controls",
+        "autoplay",
+        "poster",
+        "loop"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Którym znacznikiem tworzy się komórkę nagłówkową tabeli?",
+      "code": "",
+      "options": [
+        "<td>",
+        "<tr>",
+        "<th>",
+        "<thead>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co robi atrybut colspan=\"2\" w komórce tabeli?",
+      "code": "<td colspan=\"2\">Razem</td>",
+      "options": [
+        "Komórka zajmuje dwa wiersze",
+        "Komórka zajmuje dwie kolumny",
+        "Tabela ma dwie kolumny",
+        "Tekst w komórce jest dwa razy większy"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jaki typ pola sprawdzi, czy wpisany tekst wygląda jak adres e-mail?",
+      "code": "",
+      "options": [
+        "type=\"text\"",
+        "type=\"mail\"",
+        "type=\"address\"",
+        "type=\"email\""
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Jak połączyć etykietę z polem formularza?",
+      "code": "<label for=\"imie\">Imię</label>\n<input type=\"text\" ??? >",
+      "options": [
+        "id=\"imie\"",
+        "name=\"label\"",
+        "for=\"imie\"",
+        "label=\"imie\""
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Który znacznik oznacza GŁÓWNĄ treść strony (powinien wystąpić tylko raz)?",
+      "code": "",
+      "options": [
+        "<section>",
+        "<article>",
+        "<main>",
+        "<body>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Który znacznik najlepiej pasuje do samodzielnego wpisu na blogu?",
+      "code": "",
+      "options": [
+        "<div>",
+        "<aside>",
+        "<span>",
+        "<article>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Jak zapisać w treści strony znak „<”, żeby przeglądarka nie potraktowała go jako początku znacznika?",
+      "code": "",
+      "options": [
+        "&lt;",
+        "&gt;",
+        "&amp;",
+        "\\<"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

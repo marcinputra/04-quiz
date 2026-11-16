@@ -1,0 +1,27 @@
+# Baza i testowa skrzynka pocztowa do pracy lokalnej:
+#   docker compose -f docker-compose.dev.yml up -d
+# api i client uruchamiasz wtedy przez `npm run dev` w ich folderach.
+# Wysłane e-maile (potwierdzenie konta, kody logowania) oglądasz na http://localhost:8025
+services:
+  db:
+    container_name: quiz_db_dev
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: quiz
+      POSTGRES_PASSWORD: quiz
+      POSTGRES_DB: quiz
+    ports:
+      - "5433:5432"
+    volumes:
+      - quiz_db_dev_data:/var/lib/postgresql/data
+
+  # Mailpit: łapie wszystkie e-maile wysyłane przez api (nic nie wychodzi do internetu)
+  mail:
+    container_name: quiz_mail_dev
+    image: axllent/mailpit:v1.27
+    ports:
+      - "1025:1025" # SMTP dla api
+      - "8025:8025" # podgląd skrzynki w przeglądarce
+
+volumes:
+  quiz_db_dev_data:

@@ -1,0 +1,368 @@
+/* Panel admina: zakładki, przyciski, formularze, edytor pytań */
+
+.mzi-auth-page-wide .mzi-admin-card {
+  max-width: 1000px;
+}
+
+/* ---------- zakładki ---------- */
+.mzi-admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid #e5e7eb22;
+  margin: -6px 0 20px;
+}
+
+.mzi-admin-tab {
+  color: #aab2c5;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.mzi-admin-tab:hover { color: #e5e7eb; }
+
+.mzi-admin-tab.active {
+  color: #facc15;
+  border-bottom-color: #facc15;
+}
+
+/* ---------- przyciski ---------- */
+.mzi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb44;
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .15s, border-color .15s;
+}
+
+.mzi-btn:hover:not(:disabled) { border-color: #facc15; }
+.mzi-btn:disabled { opacity: .4; cursor: default; }
+
+.mzi-btn-primary {
+  background-color: #facc15;
+  border-color: #facc15;
+  color: #262a2b;
+}
+.mzi-btn-primary:hover:not(:disabled) { background-color: #fde047; }
+
+.mzi-btn-danger { color: #f3a5a5; border-color: #e17b7b66; }
+.mzi-btn-danger:hover:not(:disabled) { border-color: #e17b7b; background-color: #e17b7b22; }
+
+.mzi-btn-small { padding: 4px 10px; font-size: 13px; }
+.mzi-btn-icon { padding: 2px 8px; font-size: 14px; min-width: 30px; }
+
+/* ---------- lista quizów ---------- */
+.mzi-admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.mzi-admin-search { flex: 1 1 220px; max-width: 360px; }
+
+.mzi-admin-table td { vertical-align: middle; }
+.mzi-admin-table td.mzi-admin-wrap { white-space: normal; min-width: 160px; }
+
+.mzi-admin-order { display: flex; gap: 4px; }
+
+.mzi-admin-quiz-title {
+  color: #e5e7eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.mzi-admin-quiz-title:hover { color: #facc15; text-decoration: underline; }
+
+.mzi-admin-slug {
+  color: #8b93a7;
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.mzi-admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.mzi-status {
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.mzi-status:disabled { cursor: default; opacity: .6; }
+.mzi-status-on { background-color: #68c79733; border-color: #68c797; color: #9fe0bf; }
+.mzi-status-off { background-color: transparent; border-color: #aab2c566; color: #aab2c5; }
+
+/* ---------- formularze ---------- */
+.mzi-admin-breadcrumb { margin: -6px 0 16px; font-size: 14px; }
+
+.mzi-admin-form,
+.mzi-question-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mzi-admin-form {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb22;
+}
+
+.mzi-admin-label {
+  font-size: 13px;
+  color: #d88f2c;
+  margin: 12px 0 4px;
+  padding: 0;
+}
+
+/* podwójna klasa — wygrywa z globalnymi input[type=text] ze StartScreen.css */
+.mzi-admin-card .mzi-admin-input {
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb44;
+  border-radius: 6px;
+  background-color: #1f2324;
+  color: #e5e7eb;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.mzi-admin-card .mzi-admin-input:focus {
+  border-color: #facc15;
+  outline: 2px solid #facc1544;
+  outline-offset: 1px;
+}
+
+.mzi-admin-card .mzi-admin-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  color: #d88f2c;
+  background-color: #0f1011;
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+.mzi-admin-slug-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mzi-admin-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+@media (max-width: 560px) {
+  .mzi-admin-row { grid-template-columns: 1fr; }
+}
+
+.mzi-admin-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* globalny styl checkboxa ze StartScreen.css daje duży margines */
+.mzi-admin-card .mzi-admin-check input[type="checkbox"] { margin: 0; }
+
+.mzi-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.mzi-admin-note {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-left: 3px solid #facc15;
+  background-color: #facc1512;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* ---------- pytania ---------- */
+.mzi-question-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.mzi-question-card {
+  border: 1px solid #e5e7eb22;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background-color: #ffffff05;
+}
+
+.mzi-question-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mzi-question-number { color: #aab2c5; font-size: 14px; }
+
+.mzi-question-text { margin: 8px 0; }
+
+.mzi-question-code.maturazinformatyki-quiz-code {
+  width: 100%;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+.mzi-question-preview-options {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+.mzi-question-preview-options li {
+  padding: 3px 8px;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+
+.mzi-preview-correct { background-color: #68c79722; }
+.mzi-preview-tag { color: #68c797; font-size: 12px; font-weight: 700; }
+
+.mzi-question-options {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mzi-option-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.mzi-option-row-correct {
+  border-color: #68c797;
+  background-color: #68c79714;
+}
+
+.mzi-admin-card .mzi-option-radio {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #68c797;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.mzi-option-letter { font-weight: 700; width: 20px; flex-shrink: 0; }
+.mzi-admin-card .mzi-option-text { flex: 1; min-width: 0; }
+
+/* ---------- artykuły (krok 6) ---------- */
+.mzi-auth-page-wide .mzi-admin-card-xl { max-width: 1200px; }
+
+.mzi-admin-toolbar-text { margin: 0; align-self: center; }
+
+.mzi-article-form-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.mzi-admin-card .mzi-article-title-input { font-size: 20px; font-weight: 600; }
+
+.mzi-article-actions { align-items: center; }
+
+.mzi-btn-publish {
+  background-color: #68c797;
+  border-color: #68c797;
+  color: #1f2324;
+}
+.mzi-btn-publish:hover:not(:disabled) { background-color: #86d6ad; border-color: #86d6ad; }
+
+.mzi-btn-right { margin-left: auto; }
+
+.mzi-unsaved { color: #facc15; font-size: 13px; }
+
+/* ---------- kursy i zapisy (krok 7) ---------- */
+.mzi-admin-count {
+  display: inline-block;
+  min-width: 20px;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background-color: #facc15;
+  color: #262a2b;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+}
+
+.mzi-admin-pending {
+  display: block;
+  font-size: 12px;
+  color: #facc15;
+}
+
+.mzi-admin-subtabs {
+  display: inline-flex;
+  border: 1px solid #e5e7eb33;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.mzi-admin-subtab {
+  padding: 7px 14px;
+  border: none;
+  background: transparent;
+  color: #aab2c5;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mzi-admin-subtab + .mzi-admin-subtab { border-left: 1px solid #e5e7eb33; }
+.mzi-admin-subtab.active { background-color: #facc15; color: #262a2b; font-weight: 700; }
+
+.mzi-admin-card select.mzi-admin-input { cursor: pointer; }
+
+/* podpowiedź pod opcją w formularzu (np. „Zakończ quiz, gdy uczeń opuści kartę”) */
+.mzi-admin-hint {
+  margin: 2px 0 10px 28px;
+  color: #aab2c5;
+  font-size: 13px;
+  line-height: 1.45;
+}

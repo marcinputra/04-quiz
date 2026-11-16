@@ -1,0 +1,361 @@
+{
+  "slug": "python-sprawdzian",
+  "title": "Python od podstaw do matury — sprawdzian",
+  "description": "Quiz podsumowujący kurs Pythona: typy, operatory, wycinki napisów, listy, zbiory, słowniki, wyrażenia listowe, funkcje, pliki, wyjątki, moduły, klasy, rekurencja, systemy liczbowe i algorytmy maturalne.",
+  "topic": "Python",
+  "level": "podstawowy",
+  "questions": [
+    {
+      "question": "Co wypisze program?",
+      "code": "print(7 // 2, 7 % 2)",
+      "options": [
+        "3 1",
+        "3.5 1",
+        "3 0.5",
+        "4 1"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Jakiego typu jest wartość zwracana przez input()?",
+      "code": "wiek = input(\"Ile masz lat? \")",
+      "options": [
+        "int, jeśli wpisano liczbę",
+        "zawsze str (tekst)",
+        "float",
+        "zależy od tego, co wpisze użytkownik"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(type(10 / 2))",
+      "options": [
+        "<class 'int'>",
+        "<class 'str'>",
+        "<class 'float'>",
+        "<class 'number'>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(list(range(2, 11, 3)))",
+      "options": [
+        "[2, 5, 8, 11]",
+        "[3, 6, 9]",
+        "[2, 4, 6, 8, 10]",
+        "[2, 5, 8]"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "s = \"informatyka\"\nprint(s[2:5])",
+      "options": [
+        "nfo",
+        "for",
+        "form",
+        "nform"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(\"Python\"[::-1])",
+      "options": [
+        "nohtyP",
+        "Python",
+        "P",
+        "n"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(-2 ** 2)",
+      "options": [
+        "4",
+        "0.25",
+        "SyntaxError",
+        "-4"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "x = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+      "options": [
+        "[1, 2, 3]",
+        "[4, 1, 2, 3]",
+        "[1, 2, 3, 4]",
+        "AttributeError"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "t = [3, 1, 2]\nt = t.sort()\nprint(t)",
+      "options": [
+        "[1, 2, 3]",
+        "[3, 1, 2]",
+        "None",
+        "[3, 2, 1]"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(len({1, 2, 2, 3, 3, 3}))",
+      "options": [
+        "6",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Który zapis tworzy pusty zbiór?",
+      "code": "",
+      "options": [
+        "set()",
+        "{}",
+        "[]",
+        "()"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "d = {\"a\": 1}\nprint(d.get(\"b\", 0))",
+      "options": [
+        "None",
+        "0",
+        "KeyError",
+        "b"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print([x * x for x in range(5) if x % 2 == 0])",
+      "options": [
+        "[1, 9]",
+        "[0, 1, 4, 9, 16]",
+        "[4, 16]",
+        "[0, 4, 16]"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(bool(\"0\"), bool(0))",
+      "options": [
+        "False False",
+        "False True",
+        "True False",
+        "True True"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "def f(a, b=2):\n    return a * b\n\nprint(f(3), f(3, 3))",
+      "options": [
+        "3 9",
+        "6 9",
+        "6 6",
+        "TypeError — brak argumentu b"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co zwraca funkcja, która nie ma instrukcji return?",
+      "code": "def przywitaj(imie):\n    print(\"Cześć,\", imie)",
+      "options": [
+        "None",
+        "0",
+        "pusty napis \"\"",
+        "False"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(int(\"101\", 2))",
+      "options": [
+        "5",
+        "101",
+        "3",
+        "ValueError"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "print(bin(10)[2:])",
+      "options": [
+        "0b1010",
+        "0101",
+        "1010",
+        "10"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Który tryb otwiera plik do zapisu, usuwając jego dotychczasową zawartość?",
+      "code": "with open(\"wyniki.txt\", \"?\") as f:",
+      "options": [
+        "\"r\"",
+        "\"w\"",
+        "\"a\"",
+        "\"rw\""
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Dlaczego przy czytaniu pliku linia po linii używa się strip()?",
+      "code": "for linia in plik:\n    slowo = linia.strip()",
+      "options": [
+        "aby zamienić tekst na liczbę",
+        "aby podzielić linię na słowa",
+        "bez strip() plik nie zostanie zamknięty",
+        "aby usunąć znak nowej linii \"\\n\" i spacje z początku i końca"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program (kolejne linie)?",
+      "code": "try:\n    print(int(\"abc\"))\nexcept ValueError:\n    print(\"błąd\")\nfinally:\n    print(\"koniec\")",
+      "options": [
+        "tylko błąd",
+        "błąd, a potem koniec",
+        "tylko koniec",
+        "abc, a potem koniec"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jaki wyjątek zgłosi ten kod?",
+      "code": "t = [1, 2, 3]\nprint(t[3])",
+      "options": [
+        "KeyError",
+        "ValueError",
+        "TypeError",
+        "IndexError"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "from collections import Counter\nprint(Counter(\"banan\").most_common(1))",
+      "options": [
+        "[('n', 2)]",
+        "[('b', 1)]",
+        "[('a', 2)]",
+        "[('a', 2), ('n', 2)]"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Jakie wartości może zwrócić random.randint(1, 6)?",
+      "code": "import random\nrzut = random.randint(1, 6)",
+      "options": [
+        "liczby całkowite od 1 do 6 (oba końce włącznie)",
+        "liczby całkowite od 1 do 5",
+        "liczby całkowite od 0 do 6",
+        "dowolne liczby rzeczywiste z przedziału [1, 6)"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Czym jest self w metodzie klasy?",
+      "code": "class Uczen:\n    def __init__(self, imie):\n        self.imie = imie",
+      "options": [
+        "nazwą klasy",
+        "zmienną globalną",
+        "słowem kluczowym tworzącym nowy obiekt",
+        "obiektem, na rzecz którego wywołano metodę"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "class A:\n    def opis(self):\n        return \"A\"\n\nclass B(A):\n    def opis(self):\n        return \"B\" + super().opis()\n\nprint(B().opis())",
+      "options": [
+        "BA",
+        "A",
+        "B",
+        "AB"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "def f(n):\n    if n == 0:\n        return 0\n    return n % 10 + f(n // 10)\n\nprint(f(2026))",
+      "options": [
+        "2026",
+        "6202",
+        "10",
+        "RecursionError"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co wypisze program?",
+      "code": "def g(n):\n    if n <= 1:\n        return 1\n    return g(n - 1) + g(n - 2)\n\nprint(g(5))",
+      "options": [
+        "5",
+        "8",
+        "13",
+        "3"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jaka jest złożoność wyszukiwania binarnego w posortowanej liście n elementów?",
+      "code": "",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Jaka jest pesymistyczna złożoność sortowania bąbelkowego?",
+      "code": "",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Do czego służy sito Eratostenesa?",
+      "code": "",
+      "options": [
+        "do obliczenia NWD dwóch liczb",
+        "do sortowania liczb",
+        "do zamiany liczby na system dwójkowy",
+        "do wyznaczenia wszystkich liczb pierwszych nie większych od n"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co wypisze program (szyfr Cezara)?",
+      "code": "z = \"y\"\nprint(chr((ord(z) - ord(\"a\") + 3) % 26 + ord(\"a\")))",
+      "options": [
+        "b",
+        "|",
+        "a",
+        "B"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

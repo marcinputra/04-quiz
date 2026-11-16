@@ -1,0 +1,193 @@
+.mzi-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1f2324;
+  border-bottom: 1px solid #e5e7eb22;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mzi-header-inner {
+  width: min(1000px, calc(100% - 32px));
+  margin: 0 auto;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 8px 0;
+}
+
+.mzi-header-logo {
+  color: #e5e7eb;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.mzi-header-yellow {
+  color: #facc15;
+}
+
+.mzi-header-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+
+.mzi-header-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+
+.mzi-header-link:hover,
+.mzi-header-link.active {
+  color: #facc15;
+  border-bottom-color: #facc15;
+}
+
+.mzi-header-user {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mzi-header-btn {
+  background: transparent;
+  color: #d88f2c;
+  border: 1px solid #d88f2c;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color .2s, color .2s;
+}
+
+.mzi-header-btn:hover,
+.mzi-header-btn.active {
+  background-color: #d88f2c;
+  color: #262a2b;
+}
+
+/* ---------- burger (menu mobilne) ---------- */
+
+.mzi-header-burger {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .mzi-header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .mzi-header-burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0 11px;
+    margin-right: -8px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .mzi-header-burger:hover {
+    border-color: #e5e7eb33;
+  }
+
+  .mzi-header-burger:focus-visible {
+    outline: 2px solid #facc15;
+    outline-offset: 2px;
+  }
+
+  .mzi-header-burger-bar {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    background: #e5e7eb;
+    transition: transform 0.25s ease, opacity 0.2s ease, background-color 0.2s;
+  }
+
+  /* trzy kreski → X */
+  .mzi-header.is-open .mzi-header-burger-bar { background: #facc15; }
+  .mzi-header.is-open .mzi-header-burger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .mzi-header.is-open .mzi-header-burger-bar:nth-child(2) { opacity: 0; }
+  .mzi-header.is-open .mzi-header-burger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* panel menu pod nagłówkiem */
+  .mzi-header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 8px 16px 16px;
+    max-height: calc(100vh - 57px);
+    max-height: calc(100dvh - 57px);
+    overflow-y: auto;
+    background-color: #1f2324;
+    border-bottom: 1px solid #e5e7eb22;
+    box-shadow: 0 16px 32px #00000066;
+    /* zamknięte: niewidoczne i poza kolejnością Tab */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+  }
+
+  .mzi-header.is-open .mzi-header-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+  }
+
+  .mzi-header-link {
+    display: block;
+    padding: 13px 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #e5e7eb14;
+    border-left: 3px solid transparent;
+  }
+
+  .mzi-header-link:hover,
+  .mzi-header-link.active {
+    border-bottom-color: #e5e7eb14;
+    border-left-color: #facc15;
+    background-color: #facc150d;
+  }
+
+  .mzi-header-user {
+    max-width: none;
+  }
+
+  .mzi-header-btn {
+    display: block;
+    margin-top: 14px;
+    padding: 11px 12px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 860px) and (prefers-reduced-motion: reduce) {
+  .mzi-header-nav,
+  .mzi-header.is-open .mzi-header-nav,
+  .mzi-header-burger-bar { transition: none; }
+}

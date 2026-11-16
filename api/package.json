@@ -1,0 +1,29 @@
+{
+  "name": "quiz-api",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node src/server.js",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:studio": "prisma studio",
+    "import:quizzes": "node --env-file=.env scripts/import-quizzes.js",
+    "create-admin": "node --env-file=.env scripts/create-admin.js",
+    "import:course": "node --env-file=.env scripts/import-course.js",
+    "import:article": "node --env-file=.env scripts/import-article.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.4",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^10.5.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  }
+}

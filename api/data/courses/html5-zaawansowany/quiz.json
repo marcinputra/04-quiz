@@ -1,0 +1,223 @@
+{
+  "slug": "html5-zaawansowany-sprawdzian",
+  "title": "HTML5 — część 2: sprawdzian (poziom zaawansowany)",
+  "description": "Quiz podsumowujący część 2: SEO, dostępność, obrazy responsywne, formularze, dialog, SVG, Canvas, multimedia, Web Components, API przeglądarki i wydajność.",
+  "topic": "HTML",
+  "level": "zaawansowany",
+  "questions": [
+    {
+      "question": "Do czego służy znacznik <link rel=\"canonical\">?",
+      "code": "",
+      "options": [
+        "Wskazuje wyszukiwarce główny adres strony, gdy ta sama treść jest pod kilkoma adresami",
+        "Ładuje arkusz stylów CSS",
+        "Blokuje indeksowanie strony",
+        "Ustawia ikonę strony"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Które tagi decydują o wyglądzie podglądu linku na Facebooku i w Messengerze?",
+      "code": "",
+      "options": ["<meta name=\"robots\">", "<link rel=\"preload\">", "Tagi Open Graph, np. <meta property=\"og:image\">", "<meta name=\"viewport\">"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Jaka jest „pierwsza zasada ARIA”?",
+      "code": "",
+      "options": [
+        "Każdy element musi mieć atrybut role",
+        "Atrybuty ARIA zmieniają wygląd elementów",
+        "ARIA jest wymagana tylko w formularzach",
+        "Jeśli istnieje natywny element HTML o potrzebnym znaczeniu, użyj go zamiast dodawać ARIA"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Przycisk zawiera tylko ikonę „✕”. Jak sprawić, by czytnik ekranu ogłosił „Zamknij okno”?",
+      "code": "<button type=\"button\" ???>✕</button>",
+      "options": ["title=\"✕\"", "aria-label=\"Zamknij okno\"", "alt=\"Zamknij okno\"", "aria-hidden=\"true\""],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Dlaczego nie należy używać tabindex o wartości większej niż 0?",
+      "code": "",
+      "options": [
+        "Psuje naturalną kolejność przechodzenia klawiszem Tab",
+        "Jest niezgodny z HTML5 i walidator zgłosi błąd",
+        "Wyłącza obsługę myszy",
+        "Ukrywa element przed czytnikami ekranu"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Co oznacza zapis sizes=\"(max-width: 600px) 100vw, 50vw\" w znaczniku <img>?",
+      "code": "<img srcset=\"a-400.jpg 400w, a-800.jpg 800w\" sizes=\"(max-width: 600px) 100vw, 50vw\" src=\"a-800.jpg\" alt=\"…\">",
+      "options": [
+        "Obraz ma zawsze 600 px szerokości",
+        "Przeglądarka ma pobrać oba pliki",
+        "Na ekranach do 600 px obraz zajmuje całą szerokość okna, na większych — połowę",
+        "Obraz zostanie wyświetlony tylko na ekranach węższych niż 600 px"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Którego atrybutu NIE należy dodawać do głównego obrazu na górze strony (baneru)?",
+      "code": "",
+      "options": ["width i height", "fetchpriority=\"high\"", "alt", "loading=\"lazy\""],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Po co w <picture> umieszcza się kilka elementów <source> z różnymi type (image/avif, image/webp)?",
+      "code": "",
+      "options": [
+        "Żeby wyświetlić wszystkie obrazy jeden pod drugim",
+        "Żeby przeglądarka wybrała pierwszy obsługiwany, nowocześniejszy (mniejszy) format",
+        "Żeby obraz działał bez internetu",
+        "Żeby obraz był animowany"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jaka wartość autocomplete pozwala telefonowi podpowiedzieć kod z SMS-a lub e-maila?",
+      "code": "",
+      "options": ["one-time-code", "new-password", "postal-code", "off"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Czym różni się <meter> od <progress>?",
+      "code": "",
+      "options": [
+        "<meter> działa tylko w formularzach",
+        "Nie ma różnicy — to synonimy",
+        "<progress> pokazuje wartość w znanym zakresie (np. poziom baterii), a <meter> postęp zadania",
+        "<meter> pokazuje wartość w znanym zakresie (np. zajęte miejsce na dysku), a <progress> postęp zadania"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co zrobi poniższy kod po wpisaniu różnych haseł?",
+      "code": "haslo2.setCustomValidity(haslo2.value === haslo.value ? \"\" : \"Hasła nie są takie same.\");",
+      "options": [
+        "Wyczyści oba pola",
+        "Oznaczy pole haslo2 jako niepoprawne z własnym komunikatem — formularz nie zostanie wysłany",
+        "Wyśle formularz z błędem do serwera",
+        "Nic — setCustomValidity działa tylko z atrybutem required"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co daje otwarcie okna metodą dialog.showModal() zamiast dialog.show()?",
+      "code": "",
+      "options": [
+        "Okno otwiera się w nowej karcie",
+        "Okno nie da się zamknąć klawiszem Escape",
+        "Reszta strony staje się nieaktywna, pojawia się tło ::backdrop, a fokus po zamknięciu wraca na przycisk",
+        "Okno wyświetla się bez stylów"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Ile linii JavaScriptu trzeba napisać, aby poniższy przycisk pokazywał i ukrywał element?",
+      "code": "<button popovertarget=\"pomoc\">Pomoc</button>\n<div id=\"pomoc\" popover>Treść pomocy</div>",
+      "options": ["Zero — atrybut popover działa bez JavaScriptu", "Jedną: pomoc.showPopover()", "Trzeba dodać bibliotekę", "Trzy — obsługa kliknięcia, Escape i kliknięcia poza elementem"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Do czego służy atrybut viewBox w SVG?",
+      "code": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 200 100\">…</svg>",
+      "options": [
+        "Ustawia kolor tła",
+        "Określa, które kształty są widoczne po kliknięciu",
+        "Ustawia przezroczystość",
+        "Definiuje wewnętrzny układ współrzędnych — rysunek skaluje się do width/height bez zniekształceń"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Które zastosowanie lepiej pasuje do Canvas niż do SVG?",
+      "code": "",
+      "options": ["Logo firmy", "Gra z tysiącami poruszających się obiektów", "Ikony w menu", "Prosty wykres, którego słupki mają być klikalne"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Który typ ścieżki <track> zawiera napisy dla osób niesłyszących, z opisem dźwięków (np. „[muzyka]”)?",
+      "code": "",
+      "options": ["subtitles", "chapters", "captions", "descriptions"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Jak uruchomić automatyczne odtwarzanie wideo, żeby przeglądarka go nie zablokowała?",
+      "code": "",
+      "options": [
+        "<video autoplay muted playsinline src=\"film.mp4\">",
+        "<video autoplay src=\"film.mp4\">",
+        "<video play=\"auto\" src=\"film.mp4\">",
+        "Wywołać film.play() od razu po załadowaniu strony"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Która nazwa własnego elementu (Custom Element) jest poprawna?",
+      "code": "customElements.define(\"???\", MojaKlasa);",
+      "options": ["karta", "Karta", "karta-kursu", "karta_kursu"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co daje użycie Shadow DOM w komponencie?",
+      "code": "this.attachShadow({ mode: \"open\" });",
+      "options": [
+        "Komponent działa szybciej w starszych przeglądarkach",
+        "Komponent jest niewidoczny dla użytkownika",
+        "Komponent nie wymaga JavaScriptu",
+        "Izolację — style z wnętrza komponentu nie wpływają na stronę, a style strony na komponent"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Jak w JavaScripcie odczytać wartość atrybutu data-produkt-id?",
+      "code": "<button data-produkt-id=\"42\">Kup</button>",
+      "options": ["el.dataset.produktId", "el.data.produkt-id", "el.getData(\"produkt\")", "el.dataset[\"data-produkt-id\"]"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Dlaczego nie należy przechowywać tokenu logowania w localStorage?",
+      "code": "",
+      "options": [
+        "localStorage ma tylko 4 KB",
+        "localStorage jest czyszczony po zamknięciu karty",
+        "Każdy skrypt na stronie (także wstrzyknięty przez XSS) może go odczytać — do sesji służą ciasteczka HttpOnly",
+        "localStorage jest wysyłany do serwera z każdym żądaniem"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Czym różni się <script defer> od <script async>?",
+      "code": "",
+      "options": [
+        "defer wykonuje skrypty po zbudowaniu HTML i w kolejności; async — zaraz po pobraniu, bez gwarancji kolejności",
+        "async blokuje budowanie strony, defer nie",
+        "defer działa tylko dla modułów ES",
+        "Nie ma różnicy"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Który wskaźnik Core Web Vitals mierzy „skakanie” strony podczas ładowania i co mu pomaga?",
+      "code": "",
+      "options": ["LCP — pomaga loading=\"lazy\"", "INP — pomaga async", "TTFB — pomaga JSON-LD", "CLS — pomagają atrybuty width i height na obrazach"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Do czego służy blok <script type=\"application/ld+json\"> ze słownikiem schema.org?",
+      "code": "",
+      "options": [
+        "Ładuje bibliotekę JavaScript",
+        "Opisuje treść strony dla wyszukiwarek (dane strukturalne) — może dać rozszerzony wynik w Google",
+        "Przechowuje ustawienia użytkownika",
+        "Wymusza tryb ciemny"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

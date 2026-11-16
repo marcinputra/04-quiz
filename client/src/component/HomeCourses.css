@@ -1,0 +1,133 @@
+/* ---------- strona główna: lista kursów ---------- */
+
+.mzi-home-courses {
+  padding: 36px 0 8px;
+}
+
+.mzi-home-courses-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mzi-home-courses-head .mzi-section-title {
+  margin-bottom: 0;
+}
+
+.mzi-home-courses-all {
+  color: #facc15;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mzi-home-courses-all:hover {
+  text-decoration: underline;
+}
+
+.mzi-home-courses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.mzi-home-course {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid #e5e7eb22;
+  border-radius: 12px;
+  background-color: #ffffff08;
+  transition: border-color .2s, background-color .2s, transform .2s;
+}
+
+.mzi-home-course:hover {
+  border-color: #facc1588;
+  background-color: #facc150a;
+  transform: translateY(-2px);
+}
+
+.mzi-home-course:focus-within {
+  border-color: #facc15;
+}
+
+/* znak technologii */
+.mzi-home-course-tech {
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: #1f2324;
+}
+
+.mzi-home-course-tech.is-html   { background: #f97316; }
+.mzi-home-course-tech.is-css    { background: #3b82f6; color: #fff; }
+.mzi-home-course-tech.is-js     { background: #facc15; }
+.mzi-home-course-tech.is-python { background: linear-gradient(135deg, #3776ab 50%, #ffd43b 50%); color: #fff; text-shadow: 0 1px 2px #0008; }
+.mzi-home-course-tech.is-sql    { background: #22c55e; }
+.mzi-home-course-tech.is-other  { background: #94a3b8; }
+
+.mzi-home-course-body {
+  min-width: 0;
+}
+
+.mzi-home-course-title {
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 4px;
+}
+
+.mzi-home-course-title a {
+  color: #f3f4f6;
+  text-decoration: none;
+}
+
+/* cała karta klikalna */
+.mzi-home-course-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+}
+
+.mzi-home-course-title a:focus-visible {
+  outline: none;
+}
+
+.mzi-home-course:hover .mzi-home-course-title a {
+  color: #facc15;
+}
+
+.mzi-home-course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #8b93a7;
+}
+
+.mzi-home-course-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #c4c9d4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mzi-home-course { transition: none; }
+  .mzi-home-course:hover { transform: none; }
+}

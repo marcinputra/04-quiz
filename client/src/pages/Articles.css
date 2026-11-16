@@ -1,0 +1,210 @@
+/* Strona główna i artykuły */
+
+.mzi-home {
+  background-color: #262a2b;
+  color: #e5e7eb;
+  min-height: calc(100vh - 56px);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mzi-container {
+  width: min(1000px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.mzi-yellow { color: #facc15; }
+
+/* ---------- powitanie ---------- */
+.mzi-hero {
+  padding: 56px 0 44px;
+  border-bottom: 1px solid #e5e7eb1a;
+  background: radial-gradient(ellipse at 20% 0%, #facc1514, transparent 60%);
+}
+
+.mzi-hero-title {
+  font-size: clamp(30px, 6vw, 46px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.mzi-hero-text {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #c4c9d4;
+  margin-bottom: 24px;
+}
+
+.mzi-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mzi-btn-hero {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: 1px solid #d88f2c;
+  background: transparent;
+  color: #d88f2c;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+
+.mzi-btn-hero:hover { background-color: #d88f2c; color: #262a2b; }
+
+.mzi-btn-hero-primary {
+  background-color: #facc15;
+  border-color: #facc15;
+  color: #262a2b;
+}
+
+.mzi-btn-hero-primary:hover { background-color: #fde047; color: #262a2b; }
+
+/* ---------- lista artykułów ---------- */
+.mzi-articles { padding: 36px 0 24px; }
+
+.mzi-section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mzi-article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.mzi-article-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb22;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff08;
+  transition: box-shadow .3s, border-color .3s;
+}
+
+.mzi-article-card:hover {
+  border-color: #facc1566;
+  box-shadow: 0 2px 14px #facc1533;
+}
+
+.mzi-article-cover {
+  display: block;
+  aspect-ratio: 16 / 9;
+  background-color: #1f2324;
+}
+
+.mzi-article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mzi-article-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px 18px;
+  flex: 1;
+}
+
+.mzi-article-date { font-size: 13px; color: #8b93a7; }
+
+.mzi-article-title { font-size: 19px; line-height: 1.35; }
+.mzi-article-title a { color: #e5e7eb; text-decoration: none; }
+.mzi-article-title a:hover { color: #facc15; }
+
+.mzi-article-excerpt {
+  color: #c4c9d4;
+  font-size: 15px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.mzi-article-more {
+  color: #facc15;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.mzi-article-more:hover { text-decoration: underline; }
+
+.mzi-articles-more { text-align: center; margin-top: 28px; }
+
+.mzi-articles-empty { color: #aab2c5; padding: 12px 0; }
+.mzi-articles-empty a { color: #facc15; }
+
+.mzi-articles-error {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #e17b7b22;
+  border: 1px solid #e17b7b;
+  color: #f3a5a5;
+  margin-bottom: 16px;
+}
+
+/* ---------- pojedynczy artykuł ---------- */
+.mzi-article-page {
+  max-width: 760px;
+  padding: 32px 0 40px;
+}
+
+.mzi-article-back {
+  display: inline-block;
+  color: #aab2c5;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.mzi-article-back:hover { color: #facc15; }
+
+.mzi-article-draft {
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-left: 3px solid #facc15;
+  background-color: #facc1512;
+}
+
+.mzi-article-admin { margin-bottom: 12px; font-size: 14px; }
+.mzi-article-admin a { color: #facc15; }
+
+.mzi-article-header { margin-bottom: 24px; }
+
+.mzi-article-page-title {
+  font-size: clamp(28px, 5vw, 38px);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.mzi-article-meta { color: #8b93a7; font-size: 15px; }
+
+.mzi-article-page-cover {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+.mzi-article-cta {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #facc1544;
+  border-radius: 12px;
+  background-color: #facc150d;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 17px;
+}

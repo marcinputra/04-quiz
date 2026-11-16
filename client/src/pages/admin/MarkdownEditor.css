@@ -1,0 +1,138 @@
+.mzi-md-editor {
+  border: 1px solid #e5e7eb44;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1f2324;
+}
+
+.mzi-md-editor:focus-within { border-color: #facc15aa; }
+
+/* ---------- pasek narzędzi ---------- */
+.mzi-md-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px 12px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e5e7eb22;
+  background-color: #262a2b;
+}
+
+.mzi-md-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+}
+
+.mzi-md-tool {
+  min-width: 32px;
+  height: 30px;
+  padding: 0 7px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mzi-md-tool:hover { border-color: #e5e7eb44; background-color: #ffffff0d; }
+.mzi-md-tool:focus-visible { outline: 2px solid #facc15; outline-offset: 1px; }
+
+.mzi-md-tool-bold { font-weight: 800; }
+.mzi-md-tool-italic { font-style: italic; font-family: Georgia, serif; }
+.mzi-md-tool-strike { text-decoration: line-through; }
+
+.mzi-md-sep {
+  width: 1px;
+  height: 18px;
+  margin: 0 4px;
+  background-color: #e5e7eb33;
+}
+
+.mzi-md-views {
+  display: flex;
+  border: 1px solid #e5e7eb33;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mzi-md-view {
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  color: #aab2c5;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mzi-md-view + .mzi-md-view { border-left: 1px solid #e5e7eb33; }
+.mzi-md-view.active { background-color: #facc15; color: #262a2b; font-weight: 700; }
+
+/* ---------- pole i podgląd ---------- */
+.mzi-md-panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
+
+.mzi-md-editor-edit .mzi-md-panes,
+.mzi-md-editor-preview .mzi-md-panes { grid-template-columns: 1fr; }
+.mzi-md-editor-edit .mzi-md-preview,
+.mzi-md-editor-preview .mzi-md-input { display: none; }
+
+.mzi-md-input {
+  width: 100%;
+  min-height: 420px;
+  height: 60vh;
+  margin: 0;
+  padding: 14px 16px;
+  border: none;
+  resize: vertical;
+  background-color: #1f2324;
+  color: #e5e7eb;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  tab-size: 4;
+}
+
+.mzi-md-input:focus { outline: none; }
+
+.mzi-md-preview {
+  padding: 14px 18px;
+  border-left: 1px solid #e5e7eb22;
+  background-color: #262a2b;
+  max-height: 60vh;
+  min-height: 420px;
+  overflow-y: auto;
+}
+
+.mzi-md-editor-preview .mzi-md-preview {
+  border-left: none;
+  max-height: none;
+}
+
+.mzi-md-preview .mzi-md { font-size: 16px; }
+
+.mzi-md-empty { color: #8b93a7; font-style: italic; }
+
+.mzi-md-status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 5px 10px;
+  border-top: 1px solid #e5e7eb22;
+  font-size: 12px;
+  color: #8b93a7;
+}
+
+/* na wąskim ekranie „obok siebie” = jedno pod drugim */
+@media (max-width: 760px) {
+  .mzi-md-panes { grid-template-columns: 1fr; }
+  .mzi-md-preview { border-left: none; border-top: 1px solid #e5e7eb22; }
+  .mzi-md-hint { display: none; }
+}

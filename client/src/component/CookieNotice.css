@@ -1,0 +1,52 @@
+.mzi-cookie {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 50;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px 20px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  border: 1px solid #facc1566;
+  border-radius: 12px;
+  background-color: #1f2324f2;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  color: #e5e7eb;
+  font-family: 'Inter', system-ui, sans-serif;
+  backdrop-filter: blur(6px);
+}
+
+.mzi-cookie-text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.mzi-cookie-text strong { color: #fff; }
+
+.mzi-cookie-link { color: #facc15; }
+
+.mzi-cookie-btn {
+  flex-shrink: 0;
+  padding: 9px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #facc15;
+  color: #262a2b;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mzi-cookie-btn:hover { background-color: #fde047; }
+.mzi-cookie-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  .mzi-cookie { left: 8px; right: 8px; bottom: 8px; padding: 12px 14px; }
+  .mzi-cookie-btn { width: 100%; }
+}

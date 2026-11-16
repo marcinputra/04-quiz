@@ -1,0 +1,27 @@
+{
+  "slug": "python-od-podstaw",
+  "title": "Python od podstaw do matury",
+  "lessons": [
+    { "file": "01-wprowadzenie.md", "title": "Wprowadzenie: instalacja i pierwszy program" },
+    { "file": "02-zmienne-typy.md", "title": "Zmienne, typy danych i wczytywanie" },
+    { "file": "03-operatory.md", "title": "Operatory i wyrażenia" },
+    { "file": "04-warunki.md", "title": "Instrukcje warunkowe: if, elif, else, match" },
+    { "file": "05-petle.md", "title": "Pętle for i while" },
+    { "file": "06-funkcje.md", "title": "Funkcje" },
+    { "file": "07-napisy.md", "title": "Napisy: indeksy, wycinki i metody" },
+    { "file": "08-listy.md", "title": "Listy" },
+    { "file": "09-krotki-zbiory-slowniki.md", "title": "Krotki, zbiory i słowniki" },
+    { "file": "10-wyrazenia-listowe.md", "title": "Wyrażenia listowe, lambda, zip i enumerate" },
+    { "file": "11-pliki.md", "title": "Pliki tekstowe: odczyt i zapis" },
+    { "file": "12-wyjatki.md", "title": "Wyjątki i debugowanie" },
+    { "file": "13-moduly.md", "title": "Moduły i biblioteka standardowa" },
+    { "file": "14-klasy.md", "title": "Klasy i programowanie obiektowe" },
+    { "file": "15-rekurencja.md", "title": "Rekurencja" },
+    { "file": "16-algorytmy-liczbowe.md", "title": "Algorytmy na liczbach: dzielniki, liczby pierwsze, NWD, systemy liczbowe" },
+    { "file": "17-algorytmy-tekstowe.md", "title": "Algorytmy na napisach: palindromy, anagramy, szyfry" },
+    { "file": "18-sortowanie-wyszukiwanie.md", "title": "Sortowanie, wyszukiwanie i złożoność" },
+    { "file": "19-zadania-maturalne.md", "title": "Zadania maturalne krok po kroku" },
+    { "file": "20-projekt.md", "title": "Projekt końcowy: „Dziennik ocen”" }
+  ],
+  "quiz": "quiz.json"
+}

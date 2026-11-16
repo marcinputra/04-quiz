@@ -1,0 +1,97 @@
+.maturazinformatyki-quiz-code {
+  border: #d88f2c 1px dotted;
+  border-radius: 8px;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  font-size: 13px;
+  padding: 12px;
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.5;
+  background: #0f1011;
+  /* overflow-x: auto; */
+  color: #d88f2c;
+}
+
+.maturazinformatyki-quiz-question-btn {
+  background-color: #262a2b;
+  border: #facc15 2px solid;
+  color: #facc15;
+  text-align: center;
+  margin: 5px;
+  padding: 20px;
+  transition: .4s;
+}
+
+.maturazinformatyki-quiz-close-btn {
+    background-color: #d88f2c;
+    color: #0f1011;
+    font-weight: 600;
+    border: 1px solid #0f1011;
+    border-radius: 8px;
+}
+
+.maturazinformatyki-quiz-close-btn:disabled {
+    background-color: #6b7476;
+}
+
+.maturazinformatyki-quiz-question-answer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.maturazinformatyki-quiz-question-btn {
+    margin: 12px;
+    color: #0f1011;
+}
+/* --- krok 4: komunikaty, wynik --- */
+
+.maturazinformatyki-quiz-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50vh;
+}
+
+.maturazinformatyki-quiz-link {
+  color: #facc15;
+}
+
+.maturazinformatyki-quiz-error {
+  margin: 14px auto;
+  padding: 10px 12px;
+  max-width: 600px;
+  border-radius: 6px;
+  background-color: #e17b7b22;
+  border: 1px solid #e17b7b;
+  color: #f3a5a5;
+  font-size: 15px;
+}
+
+.maturazinformatyki-quiz-result-score {
+  color: #facc15;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.maturazinformatyki-quiz-result-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.maturazinformatyki-quiz-result-actions .maturazinformatyki-quiz-start-button {
+  margin: 0;
+}
+
+/* quiz zakończony po opuszczeniu karty (opcja lockOnLeave) */
+.maturazinformatyki-quiz-left {
+  border: 1px solid #f87171;
+  background: rgb(248 113 113 / 12%);
+  color: #fecaca;
+  border-radius: 10px;
+  padding: 12px 14px;
+}

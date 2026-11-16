@@ -1,0 +1,7 @@
+{
+  "slug": "rekurencja-python-wydajnosc",
+  "title": "Algorytmy rekurencyjne w Pythonie — kiedy są szybkie, a kiedy bardzo wolne",
+  "excerpt": "Ten sam Fibonacci liczony w 0,15 s albo w 0,0000006 s. Pokazujemy na pomiarach, skąd bierze się wykładniczy czas rekurencji, jak pomaga @lru_cache, kiedy wybrać pętlę i dlaczego szybkie potęgowanie potrzebuje tylko 14 wywołań.",
+  "coverUrl": "/artykuly/rekurencja-okladka.webp",
+  "content": "content.md"
+}

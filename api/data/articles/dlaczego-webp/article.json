@@ -1,0 +1,7 @@
+{
+  "slug": "dlaczego-webp",
+  "title": "Dlaczego warto wstawiać obrazy WebP na stronie internetowej?",
+  "excerpt": "WebP pozwala zmniejszyć obrazy kilkukrotnie bez widocznej utraty jakości. Czym jest ten format, ile naprawdę można zyskać (pomiar na zdjęciu z tej strony), jak zamienić obrazy na WebP i jak poprawnie wstawić je w HTML.",
+  "coverUrl": "/artykuly/webp-okladka.webp",
+  "content": "content.md"
+}

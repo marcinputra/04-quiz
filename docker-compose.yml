@@ -2,17 +2,79 @@ services:
   matutrazinformatyki_frontend:
     container_name: quiz_matutrazinformatyki_it
     build:
-      context: ./
+      context: ./client
     restart: always
+    depends_on:
+      - api
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.matutrazinformatyki.rule=Host(`quiz.maturazinformatyki.it`)"
+      # główny adres strony: https://maturazinformatyki.it
+      - "traefik.http.routers.matutrazinformatyki.rule=Host(`maturazinformatyki.it`)"
       - "traefik.http.routers.matutrazinformatyki.entrypoints=websecure"
       - "traefik.http.routers.matutrazinformatyki.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.matutrazinformatyki.service=matutrazinformatyki"
       - "traefik.http.services.matutrazinformatyki.loadbalancer.server.port=80"
+      # www. i dawny adres quiz. -> stałe przekierowanie (301) na maturazinformatyki.it z zachowaniem ścieżki
+      # (np. quiz.maturazinformatyki.it/quiz/sql-podstawy-1 -> maturazinformatyki.it/quiz/sql-podstawy-1)
+      - "traefik.http.routers.matutrazinformatyki-redirect.rule=Host(`www.maturazinformatyki.it`) || Host(`quiz.maturazinformatyki.it`)"
+      - "traefik.http.routers.matutrazinformatyki-redirect.entrypoints=websecure"
+      - "traefik.http.routers.matutrazinformatyki-redirect.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.matutrazinformatyki-redirect.middlewares=matutrazinformatyki-to-apex"
+      - "traefik.http.routers.matutrazinformatyki-redirect.service=matutrazinformatyki"
+      - "traefik.http.middlewares.matutrazinformatyki-to-apex.redirectregex.regex=^https?://(?:www|quiz)\\.maturazinformatyki\\.it(?::[0-9]+)?/(.*)"
+      - "traefik.http.middlewares.matutrazinformatyki-to-apex.redirectregex.replacement=https://maturazinformatyki.it/$${1}"
+      - "traefik.http.middlewares.matutrazinformatyki-to-apex.redirectregex.permanent=true"
     networks:
       - traefik-net
+      - internal
+
+  api:
+    container_name: quiz_api
+    build:
+      context: ./api
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+      PORT: 4000
+      JWT_SECRET: ${JWT_SECRET:?Ustaw JWT_SECRET w pliku .env}
+      COOKIE_SECURE: "true"
+      # adres strony w linkach w e-mailach (potwierdzenie konta)
+      APP_URL: ${APP_URL:-https://maturazinformatyki.it}
+      # poczta — bez SMTP_HOST kontener api nie wystartuje
+      SMTP_HOST: ${SMTP_HOST:?Ustaw SMTP_HOST w pliku .env (serwer poczty)}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-false}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      MAIL_FROM: ${MAIL_FROM:-maturazinformatyki.it <no-reply@maturazinformatyki.it>}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+
+  db:
+    container_name: quiz_db
+    image: postgres:17-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - quiz_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - internal
+
+volumes:
+  quiz_db_data:
 
 networks:
   traefik-net:
     external: true
+  internal:

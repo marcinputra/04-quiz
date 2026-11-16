@@ -1,0 +1,188 @@
+{
+  "slug": "css-sprawdzian",
+  "title": "CSS od podstaw do layoutu — sprawdzian",
+  "description": "Quiz podsumowujący kurs CSS: selektory, kaskada, jednostki, model pudełkowy, Flexbox, Grid, responsywność, animacje i zmienne.",
+  "topic": "CSS",
+  "level": "podstawowy",
+  "questions": [
+    {
+      "question": "Jaki jest zalecany sposób podłączenia CSS do kilku podstron?",
+      "code": "",
+      "options": ["Atrybut style w każdym elemencie", "Znacznik <style> na każdej podstronie", "Zewnętrzny plik podłączony przez <link rel=\"stylesheet\">", "Znacznik <css src=\"style.css\">"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Który selektor ma NAJWYŻSZĄ specyficzność?",
+      "code": "",
+      "options": ["#menu a", "nav .menu a", "nav ul li a", ".menu .link"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Jaki kolor będzie miał tekst akapitu?",
+      "code": "<p class=\"wazny\">Tekst</p>\n\n.wazny { color: red; }\np { color: blue; }",
+      "options": ["niebieski — reguła jest zapisana później", "czerwony — selektor klasy ma wyższą specyficzność", "czarny — reguły się wykluczają", "fioletowy — kolory się mieszają"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Która jednostka jest najlepsza dla rozmiaru czcionki, bo szanuje ustawienia przeglądarki użytkownika?",
+      "code": "",
+      "options": ["px", "pt", "vw", "rem"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Co robi poniższa deklaracja?",
+      "code": "h1 { font-size: clamp(1.75rem, 5vw, 3rem); }",
+      "options": [
+        "Ustawia rozmiar zależny od szerokości okna, ale nie mniejszy niż 1.75rem i nie większy niż 3rem",
+        "Losuje jeden z trzech rozmiarów",
+        "Ustawia zawsze 5vw",
+        "Ustawia 1.75rem na telefonie i 3rem na komputerze, bez wartości pośrednich"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Element ma width: 300px, padding: 20px i border: 2px. Jaką ma całkowitą szerokość przy box-sizing: border-box?",
+      "code": "",
+      "options": ["344px", "340px", "322px", "300px"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Jak wyśrodkować w poziomie blok o max-width: 1000px?",
+      "code": "",
+      "options": ["text-align: center", "margin-inline: auto", "align-items: center", "float: center"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Które elementy domyślnie ignorują width, height i marginesy pionowe?",
+      "code": "",
+      "options": ["display: block (np. div, p)", "display: inline-block", "display: inline (np. a, span)", "display: flex"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Którą pseudoklasę należy stylować, aby osoby korzystające z klawiatury wyraźnie widziały, gdzie są?",
+      "code": "",
+      "options": [":focus-visible", ":hover", ":visited", ":active"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Które elementy wskaże selektor?",
+      "code": "a[href$=\".pdf\"]",
+      "options": ["Linki, których adres zaczyna się od .pdf", "Linki, których adres zawiera słowo pdf w dowolnym miejscu", "Linki z klasą pdf", "Linki, których adres kończy się na .pdf"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Czego wymaga pseudoelement ::before, żeby się wyświetlił?",
+      "code": "",
+      "options": ["Atrybutu data-before w HTML", "Właściwości content", "display: block", "position: absolute"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Jak w kontenerze Flexbox ustawić logo po lewej, a menu po prawej stronie?",
+      "code": ".naglowek { display: flex; ??? }",
+      "options": ["align-items: space-between", "flex-direction: row-reverse", "justify-content: space-between", "flex-wrap: wrap"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co oznacza flex: 1 1 280px dla elementu we Flexboxie?",
+      "code": "",
+      "options": [
+        "Element ma zawsze dokładnie 280px",
+        "Element zaczyna od 280px, może rosnąć i może się kurczyć",
+        "Element jest pierwszy w kolejności",
+        "Element zajmuje 1 z 280 kolumn"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Co tworzy poniższa reguła?",
+      "code": ".galeria {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n}",
+      "options": [
+        "Dokładnie 220 kolumn",
+        "Jedną kolumnę o szerokości 220px",
+        "Siatkę, w której zmieści się tyle kolumn (min. 220px każda), ile pozwala szerokość — bez media queries",
+        "Siatkę, która działa tylko na ekranach szerszych niż 220px"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Co oznacza jednostka fr w CSS Grid?",
+      "code": "",
+      "options": ["Część wolnego miejsca w siatce", "Rozmiar czcionki elementu", "Klatkę animacji", "1% szerokości okna"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Które narzędzie lepiej pasuje do układu CAŁEJ strony (nagłówek, pasek boczny, treść, stopka)?",
+      "code": "",
+      "options": ["float", "Flexbox — bo układa w jednym wymiarze", "position: absolute", "CSS Grid z grid-template-areas — bo układa w dwóch wymiarach"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Na czym polega podejście mobile-first?",
+      "code": "",
+      "options": [
+        "Strona działa tylko na telefonach",
+        "Domyślne style są dla telefonu, a większe ekrany obsługuje się przez @media (min-width: …)",
+        "Najpierw tworzy się aplikację mobilną, potem stronę",
+        "Używa się wyłącznie max-width w media queries"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Na co reagują container queries (@container), w odróżnieniu od media queries?",
+      "code": "",
+      "options": ["Na orientację telefonu", "Na tryb ciemny", "Na rozmiar kontenera (rodzica), a nie całego okna", "Na prędkość internetu"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Które position sprawi, że nagłówek „przyklei się” do góry dopiero podczas przewijania?",
+      "code": "",
+      "options": ["position: fixed", "position: absolute", "position: relative", "position: sticky"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Względem czego pozycjonowany jest element z position: absolute?",
+      "code": "",
+      "options": [
+        "Względem najbliższego przodka z position innym niż static",
+        "Zawsze względem okna przeglądarki",
+        "Względem poprzedniego elementu",
+        "Względem elementu body, niezależnie od przodków"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Które właściwości najlepiej animować, żeby animacja była płynna?",
+      "code": "",
+      "options": ["width i height", "transform i opacity", "margin i padding", "top i left"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Po co stosuje się @media (prefers-reduced-motion: reduce)?",
+      "code": "",
+      "options": [
+        "Żeby przyspieszyć ładowanie strony",
+        "Żeby wyłączyć animacje na starych przeglądarkach",
+        "Żeby ograniczyć animacje u osób, które włączyły w systemie ograniczenie ruchu",
+        "Żeby zmniejszyć rozmiar pliku CSS"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Jak użyć zmiennej CSS zdefiniowanej w :root?",
+      "code": ":root { --kolor-glowny: #facc15; }",
+      "options": ["color: $kolor-glowny;", "color: --kolor-glowny;", "color: @kolor-glowny;", "color: var(--kolor-glowny);"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Dlaczego zmienne CSS ułatwiają tryb ciemny?",
+      "code": "",
+      "options": [
+        "Wystarczy w @media (prefers-color-scheme: dark) podmienić wartości kilku zmiennych — reszta stylów zostaje bez zmian",
+        "Zmienne automatycznie odwracają kolory",
+        "Tryb ciemny działa tylko ze zmiennymi",
+        "Zmienne są szybsze niż zwykłe kolory"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

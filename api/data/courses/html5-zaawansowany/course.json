@@ -1,0 +1,17 @@
+{
+  "slug": "html5-zaawansowany",
+  "title": "HTML5 — część 2: poziom zaawansowany",
+  "lessons": [
+    { "file": "01-head-seo.md", "title": "Zaawansowany head: SEO, Open Graph i ikony" },
+    { "file": "02-dostepnosc.md", "title": "Dostępność: WCAG i ARIA w praktyce" },
+    { "file": "03-obrazy-responsywne.md", "title": "Obrazy responsywne: srcset, sizes i picture" },
+    { "file": "04-formularze-zaawansowane.md", "title": "Zaawansowane formularze i walidacja" },
+    { "file": "05-elementy-interaktywne.md", "title": "Elementy interaktywne: details, dialog i popover" },
+    { "file": "06-svg-canvas.md", "title": "Grafika w HTML5: SVG i Canvas" },
+    { "file": "07-multimedia-api.md", "title": "Zaawansowane multimedia: napisy WebVTT i Media API" },
+    { "file": "08-web-components.md", "title": "Web Components: template, slot i Shadow DOM" },
+    { "file": "09-api-przegladarki.md", "title": "API przeglądarki: data-*, Web Storage i drag & drop" },
+    { "file": "10-wydajnosc-projekt.md", "title": "Wydajność, dane strukturalne i projekt końcowy" }
+  ],
+  "quiz": "quiz.json"
+}
