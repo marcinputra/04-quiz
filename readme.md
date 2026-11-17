@@ -1976,3 +1976,24 @@ Siódmy artykuł z pliku (`import:article`), **krótki** (ok. 2500 znaków). Adr
 **Sprawdzone:** tabela kroków i liczby kroków policzone programem; wszystkie bloki kodu uruchomione; najgorszy przypadek dla liczb do 10⁹ (kolejne liczby Fibonacciego) — 42 kroki, zgodnie z tekstem („kilkadziesiąt”); przeglądarka (1280 i 375 px) bez błędów.
 
 **Wdrożenie:** `docker compose up -d --build`, potem `docker compose exec api node scripts/import-article.js algorytm-euklidesa`.
+
+---
+
+## Artykuł „Dodawanie i odejmowanie liczb binarnych — pisemnie, w U2 i w Pythonie”
+
+Ósmy artykuł z pliku (`import:article`), ok. 7100 znaków. Adres: `/artykuly/dodawanie-odejmowanie-binarne`, opublikowany.
+
+- zasady dodawania (tabela, w tym 1 + 1 = 10 i 1 + 1 + 1 = 11) i dwa przykłady pisemne z przeniesieniami: 1011 + 110 = 10001 (11 + 6 = 17) z tabelą kolumna po kolumnie, 111 + 111 = 1110,
+- zasady odejmowania z pożyczką i przykład 1101 − 110 = 111 (13 − 6 = 7) z tabelą kolumna po kolumnie; pożyczka przez kilka zer: 10000 − 1 = 1111,
+- odejmowanie przez dodawanie w kodzie U2 na 8 bitach: 13 − 6 (odrzucenie 9. bitu) i 6 − 13 = 11111001 = −7 (waga −128 najstarszego bitu), tabela przykładowych liczb w U2, zakres −128…127,
+- przepełnienie: bez znaku (200 + 100 → 44) i w U2 (100 + 50 → −106) z regułą rozpoznawania,
+- Python: `int(..., 2)`, `bin`, `format(..., "08b")`, `& 0xFF` dla U2 oraz własna funkcja `dodaj_bin` (dodawanie pisemne na napisach),
+- tabela najczęstszych błędów, 4 zadania z odpowiedziami, link do lekcji 16 kursu Python.
+
+**Okładka:** `client/public/artykuly/binarne-dodawanie-okladka.webp` (1600 × 900, 27 KB) — działanie pisemne 1011 + 0110 z przeniesieniami.
+
+**Sprawdzone:** wszystkie działania, zapisy U2, przykłady przepełnienia i odpowiedzi do zadań policzone w Pythonie 3.14; oba bloki kodu Pythona uruchomione (wyniki zgodne z komentarzami); wyrównanie kolumn w działaniach pisemnych sprawdzone na wyrenderowanej stronie; przeglądarka (Chrome, 1280 i 375 px) — 6 tabel, 8 bloków kodu, bez nieprzetworzonego Markdown, bez przewijania w bok i błędów JS, okładka się wczytuje.
+
+**Pliki:** `api/data/articles/dodawanie-odejmowanie-binarne/` (`article.json`, `content.md`), okładka.
+
+**Wdrożenie:** `docker compose up -d --build`, potem `docker compose exec api node scripts/import-article.js dodawanie-odejmowanie-binarne`.

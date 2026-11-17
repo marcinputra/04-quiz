@@ -1,0 +1,7 @@
+{
+  "slug": "dodawanie-odejmowanie-binarne",
+  "title": "Dodawanie i odejmowanie liczb binarnych — pisemnie, w U2 i w Pythonie",
+  "excerpt": "Dlaczego 1 + 1 = 10? Dodawanie i odejmowanie liczb dwójkowych pisemnie, krok po kroku, z przeniesieniem i pożyczką. Do tego odejmowanie przez dodawanie w kodzie U2, przepełnienie i sprawdzanie wyników w Pythonie.",
+  "coverUrl": "/artykuly/binarne-dodawanie-okladka.webp",
+  "content": "content.md"
+}
